@@ -1,0 +1,104 @@
+{
+  "hero": {
+    "badge": "Sobre a InforAntunes",
+    "title": "Tecnologia com experiência.",
+    "subtitle": "Pessoas com propósito.",
+    "desc": "Mais de 25 anos a apoiar empresas portuguesas com tecnologia, software de gestão, automação e suporte técnico especializado."
+  },
+  "story": {
+    "badge": "A nossa história",
+    "title": "Uma empresa construída para durar.",
+    "p1": "A InforAntunes nasceu em 1997, na Lourinhã, e teve início como empresário em nome individual, numa altura em que a tecnologia empresarial começava a dar os primeiros passos em Portugal. Em 2001, fruto do crescimento da atividade e da consolidação do negócio, foi constituída a empresa InforAntunes.",
+    "p2": "Desde então, crescemos lado a lado com as empresas que apoiamos, acompanhando a evolução tecnológica e as novas exigências do mercado. Ao longo destes anos, mantivemos uma prioridade que continua a definir a nossa forma de trabalhar: prestar um serviço de qualidade, próximo e orientado para os resultados dos nossos clientes.",
+    "p3": "O nosso modelo é simples: combinamos tecnologia de referência com uma equipa humana próxima, especializada e comprometida com o sucesso de cada cliente. Mais do que fornecer soluções tecnológicas, procuramos compreender cada negócio, identificar as suas necessidades e construir relações de parceria duradouras."
+  },
+  "values": {
+    "badge": "Valores",
+    "title": "O que nos define.",
+    "items": [
+      {
+        "icon": "◆",
+        "title": "Proximidade",
+        "desc": "Estamos próximos dos nossos clientes — literalmente e estrategicamente. O acompanhamento humano é parte da nossa proposta de valor."
+      },
+      {
+        "icon": "◈",
+        "title": "Competência",
+        "desc": "Mais de 25 anos de experiência acumulada em tecnologia empresarial, suporte técnico e implementação de soluções."
+      },
+      {
+        "icon": "◉",
+        "title": "Confiança",
+        "desc": "Uma relação construída ao longo de anos com empresas de diferentes setores, baseada na transparência e no cumprimento de compromissos."
+      },
+      {
+        "icon": "◎",
+        "title": "Inovação",
+        "desc": "Acompanhamos as transformações do mercado e introduzimos novas tecnologias — como automação e robótica — quando fazem sentido para os nossos clientes."
+      }
+    ]
+  },
+  "timeline": {
+    "badge": "Percurso",
+    "title": "Mais de 25 anos de evolução.",
+    "items": [
+      {
+        "year": "1997",
+        "title": "Fundação",
+        "desc": "Nasce em 1997, na Lourinhã, como ´CPM Informática´, com foco em software para restauração e suporte informático"
+      },
+      {
+        "year": "2005",
+        "title": "Expansão de soluções",
+        "desc": "Alargamento do portefólio com novas parcerias de software, incluindo soluções para restauração e hotelaria."
+      },
+      {
+        "year": "2012",
+        "title": "PME Líder",
+        "desc": "Reconhecida pela primeira vez como PME Líder pelo IAPMEI, distinção que reflete a solidez financeira e capacidade de crescimento."
+      },
+      {
+        "year": "2018",
+        "title": "Pagamentos automatizados",
+        "desc": "Integração de sistemas de gestão automática de dinheiro com a solução Cashlogy, reforçando a área de automação."
+      },
+      {
+        "year": "2022",
+        "title": "Robótica de serviço",
+        "desc": "Parceria com Pudu Robotics para comercialização e suporte de robôs de serviço em Portugal."
+      },
+      {
+        "year": "2024",
+        "title": "PME Excelência",
+        "desc": "Obtenção do estatuto PME Excelência, reconhecendo o desempenho e a solidez da empresa ao longo de mais de duas décadas."
+      }
+    ]
+  },
+  "recognition": {
+    "title": "Reconhecimento institucional.",
+    "subtitle": "Distinções que refletem o nosso compromisso com a excelência.",
+    "items": [
+      {
+        "title": "PME Líder",
+        "sub": "IAPMEI",
+        "desc": "Reconhecimento atribuído pelo IAPMEI a empresas com desempenho superior nos critérios de solidez, crescimento e capacidade financeira."
+      },
+      {
+        "title": "PME Excelência",
+        "sub": "IAPMEI",
+        "desc": "Distinção atribuída a empresas com os mais elevados níveis de desempenho económico e financeiro dentro das PME Líder."
+      },
+      {
+        "title": "Pagamento Pontual",
+        "sub": "Infoline",
+        "desc": "Certificação que atesta o cumprimento pontual das obrigações comerciais e financeiras da empresa."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Vamos trabalhar juntos?",
+    "desc": "Fale com a nossa equipa e descubra como podemos apoiar o crescimento da sua empresa.",
+    "primary": "Contacte-nos →",
+    "secondary": "Ver soluções"
+  }
+}

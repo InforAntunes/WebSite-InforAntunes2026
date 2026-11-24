@@ -1,0 +1,159 @@
+{
+  "hero": {
+    "label": "Technology · Management · Automation",
+    "title1": "Technology that",
+    "title2": "simplifies your",
+    "title3": "business.",
+    "description": "Management software, payment automation, service robotics and specialist IT support — all in one technology partnership."
+  },
+  "credibility": {
+    "label": "Institutional recognition",
+    "pme_lider_sub": "IAPMEI · National recognition",
+    "pme_excel_sub": "IAPMEI · Excellence distinction",
+    "payment_sub": "Infoline · Financial credibility"
+  },
+  "about": {
+    "badge": "About the company",
+    "title1": "Technology with",
+    "title2": "experience.",
+    "title3": "People with purpose.",
+    "p1": "InforAntunes is a Portuguese company specialising in business technology. Since 1997, we have supported organisations across different sectors with software solutions, automation, support and hardware.",
+    "p2": "Headquartered in Lourinhã, we combine the proximity of a regional company with the national reach of a reference technology partner — recognised as PME Líder and PME Excelência.",
+    "cta": "Discover InforAntunes"
+  },
+  "services": {
+    "badge": "What we do",
+    "title1": "Technology applied",
+    "title2": "to your business.",
+    "viewAll": "View all services →",
+    "items": [
+      {
+        "num": "01",
+        "title": "Management Software",
+        "desc": "POS and integrated management solutions for retail, hospitality and food service."
+      },
+      {
+        "num": "02",
+        "title": "IT Support",
+        "desc": "Specialist technical assistance, preventive maintenance and remote and on-site support."
+      },
+      {
+        "num": "03",
+        "title": "Custom Development",
+        "desc": "Tailored solutions adapted to the specific needs of each business."
+      },
+      {
+        "num": "04",
+        "title": "Automated Payments",
+        "desc": "Automatic cash management systems that eliminate errors and increase efficiency."
+      },
+      {
+        "num": "05",
+        "title": "Service Robotics",
+        "desc": "Pudu robots for restaurants, hotels and retail — supporting faster, more efficient operations."
+      },
+      {
+        "num": "06",
+        "title": "Hardware & Networks",
+        "desc": "IT infrastructure, network installation and professional equipment."
+      },
+      {
+        "num": "07",
+        "title": "Cybersecurity and Infrastructure",
+        "desc": "Implementation and management of cybersecurity and IT infrastructure solutions to protect business data, systems and operations."
+      },
+      {
+        "num": "08",
+        "title": "Sistema Ponto",
+        "desc": "Manage schedules, attendance, holidays and teams on Web and Mobile."
+      }
+    ]
+  },
+  "software": {
+    "badge": "Management Software",
+    "title1": "Tools that keep",
+    "title2": "your business moving.",
+    "desc": "Certified POS and hotel management solutions for different industry sectors.",
+    "viewAll": "View all software →",
+    "products": [
+      {
+        "cat": "POS · Food Service",
+        "name": "WinRest",
+        "desc": "A multilingual application designed for various operating systems and tailored to the restaurant and hospitality sectors. Featuring a simple, user-friendly interface, it is exceptionally powerful thanks to a wide range of configurations adaptable to the diversity of this market.",
+        "cta": "Learn more →"
+      },
+      {
+        "cat": "Management · Multi-sector",
+        "name": "XD",
+        "desc": "The simplest and most intuitive retail software—adapting to your business needs, whether for a small shop or a chain of stores.",
+        "cta": "Learn more →"
+      },
+      {
+        "cat": "PMS · Food Service",
+        "name": "Zonesoft",
+        "desc": "Whether for a small restaurant or a large fast-food chain, a lawyer or a major festival, Zone Soft offers the most comprehensive and integrated solutions for fixed or mobile points of sale, business management, invoicing, and online management.",
+        "cta": "Learn more →"
+      }
+    ]
+  },
+  "payments": {
+    "badge": "Automated Payments",
+    "title1": "Fewer errors.",
+    "title2": "More control.",
+    "desc": "Cashlogy automates cash management at the till, eliminating counting errors, reducing closing time and increasing the security of the payment process.",
+    "features": [
+      "Automatic counting of notes and coins",
+      "Recording and auditing of every transaction",
+      "Integration with existing POS software",
+      "Reduction of human error in the payment process"
+    ],
+    "cta": "Discover Cashlogy →",
+    "floatLabel": "Automatic Management"
+  },
+  "robotics": {
+    "badge": "Service Robotics",
+    "title1": "The next generation",
+    "title2": "of service",
+    "title3": "is already here.",
+    "desc": "Pudu Robotics robots automate delivery, service and customer interaction tasks in restaurants, hotels and commercial spaces — increasing efficiency and freeing teams to focus on what truly matters.",
+    "contexts": [
+      "Restaurants",
+      "Hotels",
+      "Retail",
+      "Logistics"
+    ],
+    "cta": "Discover Pudu Robotics →"
+  },
+  "accompaniment": {
+    "badge": "Support",
+    "title1": "More than technology.",
+    "title2": "Partnership.",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Implement",
+        "desc": "Full installation and configuration of solutions at your premises."
+      },
+      {
+        "num": "02",
+        "title": "Integrate",
+        "desc": "Connection with existing systems for a unified experience."
+      },
+      {
+        "num": "03",
+        "title": "Support",
+        "desc": "Ongoing technical support, training and preventive maintenance."
+      },
+      {
+        "num": "04",
+        "title": "Evolve",
+        "desc": "Updates, improvements and new features as your business grows."
+      }
+    ]
+  },
+  "finalCta": {
+    "badge": "Get started today",
+    "title": "Ready to make your business more efficient?",
+    "desc": "Talk to our team and discover how InforAntunes can support your business."
+  }
+}

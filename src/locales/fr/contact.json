@@ -1,0 +1,5 @@
+{
+  "hero": { "badge": "Contactez-nous", "title": "Parlons de", "subtitle": "votre prochain projet.", "desc": "L'équipe InforAntunes est disponible pour vous aider à trouver la solution technologique adaptée à votre entreprise." },
+  "info": { "title": "Informations de contact", "address": "Adresse", "phone": "Téléphone", "email": "E-mail" },
+  "form": { "title": "Envoyez-nous un message", "subtitle": "Nous répondons généralement en moins de 24 heures.", "name": "Nom *", "namePlaceholder": "Votre nom", "company": "Entreprise", "companyPlaceholder": "Nom de l'entreprise", "email": "E-mail *", "emailPlaceholder": "email@entreprise.fr", "phone": "Téléphone", "phonePlaceholder": "+351 000 000 000", "message": "Message *", "messagePlaceholder": "Décrivez comment nous pouvons aider votre entreprise...", "submit": "Envoyer le message →", "sending": "Envoi en cours...", "errors": { "nameRequired": "Le nom est obligatoire", "emailInvalid": "Adresse e-mail invalide", "messageRequired": "Le message est obligatoire" }, "success": { "title": "Message envoyé !", "desc": "Nous avons bien reçu votre message et nous vous répondrons prochainement." } }
+}

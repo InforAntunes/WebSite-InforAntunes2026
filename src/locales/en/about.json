@@ -1,0 +1,104 @@
+{
+  "hero": {
+    "badge": "About InforAntunes",
+    "title": "Technology with experience.",
+    "subtitle": "People with purpose.",
+    "desc": "Over 25 years supporting Portuguese businesses with technology, management software, automation and specialist technical support."
+  },
+  "story": {
+    "badge": "Our story",
+    "title": "A company built to last.",
+    "p1": "InforAntunes began in 1997 in Lourinhã as a sole trader, at a time when business technology was taking its first steps in Portugal. In 2001, following the growth and consolidation of the business, the company InforAntunes was incorporated.",
+    "p2": "Since then, we have grown alongside the companies we support, keeping pace with technological developments and new market demands. Throughout these years, one priority has continued to define how we work: delivering a high-quality, personal service focused on our clients’ results.",
+    "p3": "Our model is simple: we combine leading technology with a close-knit, specialist team committed to every client’s success. More than supplying technology solutions, we seek to understand each business, identify its needs and build lasting partnerships."
+  },
+  "values": {
+    "badge": "Values",
+    "title": "What defines us.",
+    "items": [
+      {
+        "icon": "◆",
+        "title": "Proximity",
+        "desc": "We stay close to our clients — literally and strategically. Human engagement is a core part of our value proposition."
+      },
+      {
+        "icon": "◈",
+        "title": "Expertise",
+        "desc": "Over 25 years of accumulated experience in business technology, technical support and solution implementation."
+      },
+      {
+        "icon": "◉",
+        "title": "Trust",
+        "desc": "A relationship built over years with companies across different sectors, based on transparency and meeting commitments."
+      },
+      {
+        "icon": "◎",
+        "title": "Innovation",
+        "desc": "We follow market changes and introduce new technologies — such as automation and robotics — when they make sense for our clients."
+      }
+    ]
+  },
+  "timeline": {
+    "badge": "Journey",
+    "title": "Over 25 years of evolution.",
+    "items": [
+      {
+        "year": "1997",
+        "title": "Founded",
+        "desc": "Founded in 1997 in Lourinhã as “CPM Informática”, focusing on restaurant software and IT support."
+      },
+      {
+        "year": "2005",
+        "title": "Solution expansion",
+        "desc": "Portfolio expansion with new software partnerships, including solutions for hospitality and food service."
+      },
+      {
+        "year": "2012",
+        "title": "PME Líder",
+        "desc": "Recognised for the first time as PME Líder by IAPMEI, reflecting financial strength and growth capacity."
+      },
+      {
+        "year": "2018",
+        "title": "Automated payments",
+        "desc": "Integration of automatic cash management systems with the Cashlogy solution, strengthening the automation division."
+      },
+      {
+        "year": "2022",
+        "title": "Service robotics",
+        "desc": "Partnership with Pudu Robotics for the commercialisation and support of service robots in Portugal."
+      },
+      {
+        "year": "2024",
+        "title": "PME Excelência",
+        "desc": "Awarded PME Excelência status, recognising the company's performance and strength over more than two decades."
+      }
+    ]
+  },
+  "recognition": {
+    "title": "Institutional recognition.",
+    "subtitle": "Distinctions that reflect our commitment to excellence.",
+    "items": [
+      {
+        "title": "PME Líder",
+        "sub": "IAPMEI",
+        "desc": "Recognition awarded by IAPMEI to companies with superior performance in terms of financial strength, growth and capacity."
+      },
+      {
+        "title": "PME Excelência",
+        "sub": "IAPMEI",
+        "desc": "Distinction awarded to companies with the highest levels of economic and financial performance within PME Líder."
+      },
+      {
+        "title": "Timely Payments",
+        "sub": "Infoline",
+        "desc": "Certification attesting the company's timely fulfilment of commercial and financial obligations."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to work together?",
+    "desc": "Talk to our team and discover how we can support the growth of your business.",
+    "primary": "Contact us →",
+    "secondary": "View solutions"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "hero": {
+    "badge": "Ce que nous faisons",
+    "title": "La technologie appliquée",
+    "subtitle": "à votre activité.",
+    "desc": "De la mise en œuvre de logiciels à la robotique, nous couvrons tous les besoins technologiques de votre entreprise avec une équipe spécialisée et engagée."
+  },
+  "items": [
+    {
+      "num": "01",
+      "title": "Logiciels de Gestion",
+      "desc": "Déploiement et support de logiciels de gestion et de POS adaptés à votre activité.",
+      "items": [
+        "POS et facturation",
+        "Formation des utilisateurs",
+        "Support spécialisé"
+      ],
+      "category": "LOGICIELS · GESTION"
+    },
+    {
+      "num": "02",
+      "title": "Support Informatique",
+      "desc": "Assistance informatique à distance et sur site pour assurer la continuité de votre activité.",
+      "items": [
+        "Support à distance et sur site",
+        "Maintenance préventive",
+        "Diagnostic et réparation"
+      ],
+      "category": "ASSISTANCE · MAINTENANCE"
+    },
+    {
+      "num": "03",
+      "title": "Développement Sur Mesure",
+      "desc": "Solutions et intégrations sur mesure pour les défis spécifiques de votre entreprise.",
+      "items": [
+        "Analyse des besoins",
+        "Développement sur mesure",
+        "Intégration des systèmes"
+      ],
+      "category": "DÉVELOPPEMENT · INTÉGRATION"
+    },
+    {
+      "num": "04",
+      "title": "Paiements Automatisés",
+      "desc": "Gestion automatique des espèces pour des paiements plus sûrs et efficaces.",
+      "items": [
+        "Intégration POS",
+        "Comptage automatique",
+        "Installation et support"
+      ],
+      "category": "PAIEMENTS · AUTOMATISATION"
+    },
+    {
+      "num": "05",
+      "title": "Robotique de Service",
+      "desc": "Robots de service Pudu pour accompagner vos équipes et améliorer le service.",
+      "items": [
+        "Conseil et installation",
+        "Formation des équipes",
+        "Support continu"
+      ],
+      "category": "ROBOTIQUE · AUTOMATISATION"
+    },
+    {
+      "num": "06",
+      "title": "Matériel et Réseaux",
+      "desc": "Équipements et connectivité professionnels adaptés à votre activité.",
+      "items": [
+        "Équipements professionnels",
+        "Réseaux structurés",
+        "Configuration et support"
+      ],
+      "category": "MATÉRIEL · RÉSEAUX"
+    },
+    {
+      "num": "07",
+      "slug": "ciberseguranca-infraestrutura",
+      "category": "CYBERSÉCURITÉ · INFRASTRUCTURE",
+      "title": "Cybersécurité et Infrastructure",
+      "desc": "Réseaux, sécurité et continuité d’activité.",
+      "items": [
+        "Protection du réseau",
+        "Sauvegarde et récupération",
+        "Supervision préventive"
+      ]
+    },
+    {
+      "num": "08",
+      "slug": "sistema-ponto",
+      "title": "Sistema Ponto",
+      "category": "GESTION DES PRÉSENCES",
+      "desc": "Gestion des horaires, présences, congés et équipes sur Web et Mobile.",
+      "items": [
+        "Web + Mobile",
+        "Géolocalisation",
+        "Tableau de bord des présences"
+      ]
+    }
+  ],
+  "systemPoint": {
+    "learnMore": "En savoir plus"
+  },
+  "infra": {
+    "badge": "Infrastructure",
+    "title": "Matériel, réseaux et infrastructure informatique.",
+    "desc": "Nous fournissons, installons et configurons toute l'infrastructure informatique nécessaire au bon fonctionnement de votre activité.",
+    "cta": "Demander un devis →"
+  },
+  "cta": {
+    "title": "Besoin d'un service spécifique ?",
+    "desc": "Parlez à notre équipe et nous trouverons la solution adaptée à votre entreprise."
+  }
+}

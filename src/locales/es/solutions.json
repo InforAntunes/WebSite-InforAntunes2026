@@ -1,0 +1,472 @@
+{
+  "hub": {
+    "badge": "Portafolio tecnológico",
+    "title": "Soluciones para cada",
+    "subtitle": "área de su negocio.",
+    "desc": "Software de gestión, automatización de pagos y robótica de servicio — un ecosistema tecnológico completo para empresas modernas.",
+    "cat01": "Categoría 01",
+    "cat02": "Categoría 02",
+    "cat03": "Categoría 03",
+    "softwareDesc": "Soluciones POS certificadas para comercio, restauración, hostelería e industria. Gestión integrada, eficiente y adaptada al mercado portugués.",
+    "paymentsDesc": "Automatice la gestión de efectivo en caja. Menos errores, más control y mayor eficiencia operacional.",
+    "roboticsDesc": "Socios de Pudu Robotics en Portugal. Robots de servicio para restaurantes, hoteles y espacios comerciales.",
+    "viewSoftware": "Ver todo el software →",
+    "viewPayments": "Ver soluciones de pago →",
+    "viewRobotics": "Ver Pudu Robotics →",
+    "noSolution": "¿No sabe qué solución es la adecuada?",
+    "noSolutionDesc": "Hable con nuestro equipo. Analizamos las necesidades de su empresa y recomendamos la solución más adecuada.",
+    "entregaLabel": "Instalación y Logística"
+  },
+  "software": {
+    "hero": {
+      "title": "Software de Gestión",
+      "desc": "Soluciones POS certificadas para diferentes sectores de actividad. Gestión integrada, eficiente y adaptada al mercado portugués."
+    },
+    "products": [
+      {
+        "cat": "POS · Restauración",
+        "name": "WinRest",
+        "desc": "Software de gestión para restaurantes, bares y pastelerías. Gestión de mesas, pedidos digitales, facturación integrada e informes en tiempo real.",
+        "tags": [
+          "POS",
+          "Gestión de Mesas",
+          "Pedidos",
+          "Informes",
+          "Multi-local"
+        ]
+      },
+      {
+        "cat": "Gestión · Multi-área",
+        "name": "XD",
+        "desc": "Plataforma de gestión versátil con módulos configurables para distintos sectores de negocio. Adaptable a las necesidades específicas de cada empresa.",
+        "tags": [
+          "Modular",
+          "Gestión",
+          "Facturación",
+          "Informes",
+          "Flexible"
+        ]
+      },
+      {
+        "cat": "POS · Restauración",
+        "name": "Zone Soft",
+        "desc": "Solución completa de gestión para restauración y bebidas. Pedidos, gestión de mesas, facturación, control de existencias e integración con plataformas de delivery.",
+        "tags": [
+          "POS",
+          "Gestión de Mesas",
+          "Pedidos en Mesa",
+          "Facturación",
+          "Delivery"
+        ]
+      }
+    ],
+    "ctaPrefix": "Saber más sobre"
+  },
+  "eticadata": {
+    "category": "ERP · Software de Gestión Empresarial",
+    "tagline": "Gestión integrada para comercio, industria y servicios.",
+    "description": "Eticadata es un sistema ERP certificado y modular, diseñado para las necesidades de las empresas. Integra facturación, stock, contabilidad, CRM y más en una sola plataforma.",
+    "featuresTitle": "Lo que ofrece Eticadata.",
+    "sectorsTitle": "¿Para quién es Eticadata?",
+    "ctaTitle": "¿Quiere saber más sobre Eticadata?",
+    "ctaDesc": "Nuestro equipo está disponible para una demostración personalizada.",
+    "features": [
+      "Facturación electrónica certificada",
+      "Gestión de stock y almacenes",
+      "Módulo de contabilidad integrado",
+      "CRM y gestión de clientes",
+      "Informes y análisis de datos",
+      "Gestión de pedidos y compras",
+      "Multi-empresa y multi-divisa",
+      "Integración con e-commerce",
+      "Backoffice web"
+    ],
+    "applications": [
+      "Comercio minorista",
+      "Mayoristas",
+      "Industria y producción",
+      "Empresas de servicios",
+      "Distribuidores",
+      "Importadores/Exportadores"
+    ]
+  },
+  "winrest": {
+    "category": "POS · Software para Restauración",
+    "tagline": "Gestión completa para restaurantes, bares y pastelerías.",
+    "description": "WinRest es un software de gestión POS desarrollado especialmente para la restauración. Gestión de mesas, pedidos digitales, facturación integrada y control total de su operación.",
+    "featuresTitle": "Lo que ofrece WinRest.",
+    "sectorsTitle": "¿Para quién es WinRest?",
+    "ctaTitle": "¿Quiere saber más sobre WinRest?",
+    "ctaDesc": "Nuestro equipo está disponible para una demostración personalizada.",
+    "features": [
+      "Gestión de mesas y salas",
+      "Pedidos digitales vía tablet",
+      "Facturación electrónica certificada",
+      "Control de cocina (KDS)",
+      "Gestión de stock de bar y cocina",
+      "Informes de ventas en tiempo real",
+      "Gestión de turnos y empleados",
+      "Multi-POS sincronizado",
+      "Integración con pagos automáticos"
+    ],
+    "applications": [
+      "Restaurantes",
+      "Bares y cafeterías",
+      "Pastelerías",
+      "Pizzerías",
+      "Comida rápida",
+      "Catering y banquetes",
+      "Snack-bares",
+      "Comedores empresariales"
+    ]
+  },
+  "xd": {
+    "category": "Software de Gestión · Multi-área",
+    "tagline": "Plataforma de gestión modular y adaptable a su negocio.",
+    "description": "XD es una plataforma de gestión versátil con módulos configurables para distintos sectores. Se adapta a las necesidades específicas de cada empresa y crece a medida que evoluciona el negocio.",
+    "featuresTitle": "Lo que ofrece XD.",
+    "sectorsTitle": "¿Para quién es XD?",
+    "ctaTitle": "¿Quiere saber más sobre XD?",
+    "ctaDesc": "Nuestro equipo está disponible para una demostración personalizada.",
+    "features": [
+      "Arquitectura modular y escalable",
+      "Facturación electrónica certificada",
+      "Gestión de clientes y proveedores",
+      "Control de stock",
+      "Informes configurables",
+      "Panel de gestión",
+      "Integración con otros sistemas",
+      "Soporte multi-empresa",
+      "Acceso vía navegador web"
+    ],
+    "applications": [
+      "PYMES de servicios",
+      "Consultoras",
+      "Agencias",
+      "Comercio especializado",
+      "Talleres y reparación",
+      "Empresas de distribución",
+      "Negocios multi-área"
+    ]
+  },
+  "zonesoft": {
+    "category": "POS · Software de Gestión de Restauración",
+    "tagline": "Gestión completa de su restaurante — del pedido a la cocina y la facturación.",
+    "description": "Zone Soft (ZS rest) es una solución POS completa para restaurantes, bares y establecimientos de restauración y bebidas.",
+    "featuresTitle": "Lo que ofrece Zone Soft.",
+    "sectorsTitle": "¿Para quién es Zone Soft?",
+    "ctaTitle": "¿Quiere saber más sobre Zone Soft?",
+    "ctaDesc": "Nuestro equipo está disponible para una demostración personalizada.",
+    "features": [
+      "Gestión y mapa visual de mesas",
+      "Registro de pedidos en mesa (PDA / Tablet)",
+      "Gestión de cocina y pantallas de preparación (ZS monitor)",
+      "Facturación rápida y división de cuentas",
+      "Integración con Uber Eats, Glovo y Grubtech",
+      "Integración con plataformas de reservas (TheFork)",
+      "Control de existencias y fichas técnicas de productos",
+      "Quioscos de autoservicio y pedidos por código QR",
+      "Informes de ventas, caja y facturación en tiempo real"
+    ],
+    "applications": [
+      "Restaurantes",
+      "Bares y pubs",
+      "Cafeterías y pastelerías",
+      "Pizzerías",
+      "Hamburgueserías y comida rápida",
+      "Food trucks",
+      "Comida para llevar y delivery",
+      "Quioscos y beach clubs"
+    ]
+  },
+  "payments": {
+    "hero": {
+      "title1": "Menos errores.",
+      "title2": "Más control.",
+      "desc": "Sistemas automáticos de gestión de efectivo que reducen errores, aumentan la seguridad y hacen el proceso de pago más eficiente."
+    },
+    "products": [
+      {
+        "name": "Cashlogy",
+        "desc": "Sistema completo de gestión automática de efectivo.",
+        "features": [
+          "Recuento automático",
+          "Auditoría total",
+          "Integración POS",
+          "Informes en tiempo real"
+        ]
+      },
+      {
+        "name": "Instalación y Logística",
+        "desc": "Servicio profesional de entrega, instalación y configuración.",
+        "features": [
+          "Entrega a domicilio",
+          "Instalación profesional",
+          "Configuración completa",
+          "Formación incluida"
+        ]
+      }
+    ],
+    "ctaTitle": "¿Listo para automatizar sus pagos?",
+    "ctaDesc": "Contáctenos para una demostración sin compromiso."
+  },
+  "cashlogy": {
+    "category": "Pagos Automatizados · Gestión de Efectivo",
+    "tagline": "Automatización completa de la gestión de efectivo en caja.",
+    "description": "Cashlogy automatiza el recuento, la autenticación, el almacenamiento y el procesamiento de billetes y monedas. Elimina errores humanos, aumenta la seguridad y libera al equipo para lo que realmente importa.",
+    "featuresTitle": "Lo que ofrece Cashlogy.",
+    "sectorsTitle": "¿Para quién es Cashlogy?",
+    "ctaTitle": "¿Quiere saber más sobre Cashlogy?",
+    "ctaDesc": "Nuestro equipo está disponible para una demostración personalizada.",
+    "features": [
+      "Recuento automático de billetes y monedas",
+      "Detección de billetes falsos",
+      "Almacenamiento seguro en caja fuerte integrada",
+      "Integración con software de caja (POS)",
+      "Informes de movimientos en tiempo real",
+      "Auditoría completa de cada transacción",
+      "Fondo de cambio automático",
+      "Alertas y notificaciones configurables",
+      "Interfaz táctil intuitiva"
+    ],
+    "applications": [
+      "Restaurantes",
+      "Supermercados",
+      "Minoristas",
+      "Farmacias",
+      "Gasolineras",
+      "Cafés y bares",
+      "Hoteles",
+      "Tiendas de conveniencia"
+    ]
+  },
+  "compact": {
+    "category": "Pagos Automatizados · Solución Compacta",
+    "tagline": "La automatización de pagos en el formato más eficiente.",
+    "description": "La Caixa Automática Compact ofrece las ventajas de la automatización de pagos en un formato compacto.",
+    "featuresTitle": "Lo que ofrece la Compact.",
+    "sectorsTitle": "¿Para quién es la Compact?",
+    "ctaTitle": "¿Quiere saber más sobre Caixa Automática Compact?",
+    "ctaDesc": "Nuestro equipo está disponible para una demostración personalizada.",
+    "features": [
+      "Dimensiones compactas para espacios reducidos",
+      "Gestión automática de monedas y billetes",
+      "Alta fiabilidad operacional",
+      "Instalación simplificada",
+      "Mantenimiento reducido",
+      "Integración con sistemas POS",
+      "Informes de operación",
+      "Soporte técnico especializado",
+      "Diseño ergonómico"
+    ],
+    "applications": [
+      "Pequeño comercio",
+      "Cafeterías y snack-bares",
+      "Peluquerías",
+      "Farmacias",
+      "Papelerías",
+      "Tiendas de servicios",
+      "Quioscos",
+      "Espacios con área limitada"
+    ]
+  },
+  "entrega": {
+    "hero": {
+      "title": "Instalación y Logística",
+      "desc": "Un servicio completo y profesional de entrega, instalación y configuración de los sistemas de pago automatizado. Para que la tecnología funcione desde el primer día."
+    },
+    "steps": [
+      {
+        "num": "01",
+        "title": "Entrega a domicilio",
+        "desc": "El equipo se entrega en sus instalaciones por nuestro equipo técnico especializado, con toda la documentación y los accesorios necesarios."
+      },
+      {
+        "num": "02",
+        "title": "Instalación profesional",
+        "desc": "Instalación técnica completa con conexión a la red eléctrica, red de datos e integración con el software de caja existente."
+      },
+      {
+        "num": "03",
+        "title": "Configuración y pruebas",
+        "desc": "Configuración detallada de todos los parámetros del sistema y realización de pruebas completas antes de la entrega al cliente."
+      },
+      {
+        "num": "04",
+        "title": "Formación del equipo",
+        "desc": "Formación práctica a los equipos operativos para garantizar un uso correcto y eficiente desde el primer día."
+      }
+    ]
+  },
+  "robotics": {
+    "hero": {
+      "tags": [
+        "ROBÓTICA",
+        "AUTOMATIZACIÓN",
+        "SERVICIO"
+      ],
+      "tagline": "La próxima generación de atención ya llegó.",
+      "desc": "Los robots Pudu Robotics automatizan tareas repetitivas de servicio y entrega en restaurantes, hoteles y espacios comerciales — aumentando la eficiencia y mejorando la experiencia del cliente.",
+      "partnerLabel": "Socio oficial",
+      "partnerCountry": "Portugal"
+    },
+    "contexts": {
+      "badge": "Aplicaciones",
+      "title": "Dónde los robots Pudu marcan la diferencia.",
+      "items": [
+        {
+          "icon": "🍽",
+          "title": "Restauración",
+          "desc": "Entrega de platos, bebidas y postres en las mesas con total autonomía."
+        },
+        {
+          "icon": "🏨",
+          "title": "Hostelería",
+          "desc": "Entrega de room service, toallas y amenities en las habitaciones de los huéspedes."
+        },
+        {
+          "icon": "🏪",
+          "title": "Comercio",
+          "desc": "Apoyo en la atención al cliente en tiendas y centros comerciales."
+        },
+        {
+          "icon": "📦",
+          "title": "Logística interna",
+          "desc": "Transporte de materiales entre departamentos y almacenes."
+        }
+      ]
+    },
+    "benefits": {
+      "badge": "Beneficios",
+      "title": "Más eficiencia. Mejor experiencia.",
+      "items": [
+        "Reducción de desplazamientos innecesarios del equipo",
+        "Liberación de colaboradores para funciones de mayor valor",
+        "Mayor capacidad de servicio sin ampliar el equipo",
+        "Experiencia diferenciadora para los clientes",
+        "Funcionamiento continuo sin pausas",
+        "Retorno sobre la inversión medible"
+      ]
+    },
+    "cta": {
+      "title": "¿Listo para experimentar el futuro del servicio?",
+      "desc": "Contáctenos para una demostración de los robots Pudu Robotics."
+    }
+  },
+  "sistemaPonto": {
+    "category": "GESTIÓN DE ASISTENCIA · WEB Y MOBILE",
+    "tagline": "Control de asistencia sencillo para empleados y gestión.",
+    "description": "Una solución inteligente de gestión de asistencia para equipos, disponible en Web y Mobile. Simplifica el control de horarios, presencias, vacaciones, ausencias y operaciones diarias.",
+    "heroImageAlt": "Interfaz Web y Mobile de Sistema Ponto",
+    "featuresTitle": "Lo que ofrece Sistema Ponto.",
+    "sectorsTitle": "¿Para quién es Sistema Ponto?",
+    "ctaTitle": "¿Quiere simplificar la gestión del tiempo de su equipo?",
+    "ctaDesc": "Solicite una demostración y descubra cómo Sistema Ponto puede hacer que la asistencia sea más sencilla, clara y eficiente.",
+    "features": [
+      "Registro de entradas y salidas",
+      "Geolocalización en el momento del registro",
+      "Control de horarios y turnos",
+      "Gestión de empleados",
+      "Banco de horas",
+      "Vacaciones, festivos y ausencias",
+      "Justificaciones de faltas",
+      "Informes de asistencia",
+      "Panel de actividad en tiempo real"
+    ],
+    "platforms": {
+      "label": "PLATAFORMAS",
+      "title": "Una solución para empleados y gestión.",
+      "items": [
+        {
+          "title": "Aplicación móvil",
+          "description": "Una experiencia sencilla para que cada empleado registre y consulte su asistencia esté donde esté.",
+          "items": [
+            "Inicio de sesión seguro",
+            "Marcación de entrada y salida",
+            "Geolocalización",
+            "Historial",
+            "Justificaciones",
+            "Vacaciones"
+          ]
+        },
+        {
+          "title": "Panel Web",
+          "description": "Una visión centralizada y actualizada para gestionar la asistencia y supervisar la operación del equipo.",
+          "items": [
+            "Panel de asistencia",
+            "Mapa de presencias",
+            "Métricas de horas",
+            "Banco de horas",
+            "Gráficos de actividad"
+          ]
+        }
+      ]
+    },
+    "applications": [
+      "Comercio y retail",
+      "Restauración y hostelería",
+      "Empresas de servicios",
+      "Industria y logística",
+      "Construcción",
+      "Salud y apoyo social",
+      "Equipos móviles y trabajo externo",
+      "Empresas con varias ubicaciones"
+    ]
+  },
+  "productPage": {
+    "featuresLabel": "Funcionalidades",
+    "sectorsLabel": "Sectores de aplicación",
+    "demoBtn": "Solicitar demostración →",
+    "specialistBtn": "Hablar con un especialista",
+    "viewOthers": "Ver otras soluciones",
+    "ctaTitle": "¿Quiere saber más sobre",
+    "ctaDesc": "Nuestro equipo está disponible para una demostración personalizada.",
+    "forWhom": "¿Para quién es"
+  },
+  "cybersecurityInfrastructure": {
+    "name": "Ciberseguridad e Infraestructura",
+    "category": "CIBERSEGURIDAD · INFRAESTRUCTURA",
+    "tagline": "Proteja su empresa y garantice una infraestructura tecnológica estable, segura y preparada para crecer.",
+    "description": "Implementamos y supervisamos redes, equipos, servidores, copias de seguridad y soluciones de seguridad informática adaptadas a su actividad.",
+    "heroImageAlt": "Entorno profesional de servidores y redes",
+    "primaryCta": "Solicitar evaluación →",
+    "secondaryCta": "Hablar con un especialista",
+    "featuresTitle": "Lo que ofrece nuestra solución.",
+    "features": [
+      "Auditoría y diagnóstico de infraestructura",
+      "Redes estructuradas y conectividad",
+      "Firewall y protección de red",
+      "Seguridad de equipos y usuarios",
+      "Copias de seguridad y recuperación de datos",
+      "Configuración y mantenimiento de servidores",
+      "Monitorización preventiva",
+      "Gestión de accesos y permisos",
+      "Soporte técnico remoto y presencial"
+    ],
+    "areas": {
+      "label": "ÁREAS DE INTERVENCIÓN",
+      "title": "Una infraestructura preparada para su negocio.",
+      "items": [
+        "Redes y conectividad",
+        "Servidores y almacenamiento",
+        "Seguridad informática",
+        "Backup y recuperación",
+        "Equipos profesionales",
+        "Monitorización y mantenimiento"
+      ]
+    },
+    "sectorsTitle": "¿Para quién es esta solución?",
+    "applications": [
+      "Comercio y venta minorista",
+      "Restauración y hostelería",
+      "Empresas de servicios",
+      "Oficinas y consultoras",
+      "Salud y asistencia social",
+      "Industria y logística",
+      "Empresas con varias ubicaciones",
+      "Negocios en crecimiento"
+    ],
+    "ctaTitle": "¿Está su infraestructura preparada para proteger su negocio?",
+    "ctaDesc": "Hable con nuestro equipo y descubra cómo podemos reforzar la seguridad, la estabilidad y el rendimiento de su tecnología."
+  }
+}

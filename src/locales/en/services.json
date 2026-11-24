@@ -1,0 +1,113 @@
+{
+  "hero": {
+    "badge": "What we do",
+    "title": "Technology applied",
+    "subtitle": "to your business.",
+    "desc": "From software implementation to robotics, we cover all your company's technology needs with a specialist, committed team."
+  },
+  "items": [
+    {
+      "num": "01",
+      "title": "Management Software",
+      "desc": "Implementation and support of management software and POS tailored to your business.",
+      "items": [
+        "POS and invoicing",
+        "User training",
+        "Specialist support"
+      ],
+      "category": "SOFTWARE · MANAGEMENT"
+    },
+    {
+      "num": "02",
+      "title": "IT Support",
+      "desc": "Remote and on-site IT assistance to keep your operations running.",
+      "items": [
+        "Remote and on-site support",
+        "Preventive maintenance",
+        "Diagnostics and repair"
+      ],
+      "category": "ASSISTANCE · MAINTENANCE"
+    },
+    {
+      "num": "03",
+      "title": "Custom Development",
+      "desc": "Custom solutions and integrations for your company’s specific challenges.",
+      "items": [
+        "Needs analysis",
+        "Custom development",
+        "Systems integration"
+      ],
+      "category": "DEVELOPMENT · INTEGRATION"
+    },
+    {
+      "num": "04",
+      "title": "Automated Payments",
+      "desc": "Automatic cash management for safer, more efficient payments.",
+      "items": [
+        "POS integration",
+        "Automatic counting",
+        "Installation and support"
+      ],
+      "category": "PAYMENTS · AUTOMATION"
+    },
+    {
+      "num": "05",
+      "title": "Service Robotics",
+      "desc": "Pudu service robots to support your teams and make service more efficient.",
+      "items": [
+        "Consulting and installation",
+        "Team training",
+        "Ongoing support"
+      ],
+      "category": "ROBOTICS · AUTOMATION"
+    },
+    {
+      "num": "06",
+      "title": "Hardware & Networks",
+      "desc": "Professional equipment and connectivity built for your operations.",
+      "items": [
+        "Professional equipment",
+        "Structured networks",
+        "Configuration and support"
+      ],
+      "category": "HARDWARE · NETWORKS"
+    },
+    {
+      "num": "07",
+      "slug": "ciberseguranca-infraestrutura",
+      "category": "CYBERSECURITY · INFRASTRUCTURE",
+      "title": "Cybersecurity and Infrastructure",
+      "desc": "Networks, security and business continuity.",
+      "items": [
+        "Network protection",
+        "Backup and recovery",
+        "Preventive monitoring"
+      ]
+    },
+    {
+      "num": "08",
+      "slug": "sistema-ponto",
+      "title": "Sistema Ponto",
+      "category": "ATTENDANCE MANAGEMENT",
+      "desc": "Manage schedules, attendance, holidays and teams on Web and Mobile.",
+      "items": [
+        "Web + Mobile",
+        "Geolocation",
+        "Attendance dashboard"
+      ]
+    }
+  ],
+  "systemPoint": {
+    "learnMore": "Learn more"
+  },
+  "infra": {
+    "badge": "Infrastructure",
+    "title": "Hardware, networks and IT infrastructure.",
+    "desc": "We supply, install and configure all the IT infrastructure your business needs — from servers and networks to point-of-sale equipment.",
+    "cta": "Request a quote →"
+  },
+  "cta": {
+    "title": "Need a specific service?",
+    "desc": "Talk to our team and we will find the right solution for your business."
+  }
+}

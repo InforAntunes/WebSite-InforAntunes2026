@@ -1,0 +1,32 @@
+{
+  "privacy": {
+    "title": "Privacy Policy",
+    "breadcrumb": "Privacy",
+    "p1": "InforAntunes, Lda. respects the privacy of its users and is committed to protecting personal data collected through this website, in compliance with the General Data Protection Regulation (GDPR).",
+    "p2": "Personal data collected through the contact form is used exclusively to respond to submitted enquiries and is not shared with third parties without the user's consent.",
+    "p3": "To exercise your rights of access, rectification, erasure or data portability, please contact us at geral@inforantunes.com."
+  },
+  "terms": {
+    "title": "Terms and Conditions",
+    "breadcrumb": "Terms",
+    "p1": "Access to and use of the InforAntunes website is subject to these Terms and Conditions of Use. By using this website, the user accepts the terms described herein.",
+    "p2": "InforAntunes reserves the right to change the content of this website without prior notice. The information provided is for informational purposes only and does not constitute a contractual offer."
+  },
+  "cookies": {
+    "title": "Cookie Policy",
+    "breadcrumb": "Cookies",
+    "p1": "The InforAntunes website uses cookies to improve the browsing experience. Cookies are small text files stored in your browser that allow repeat visits to be recognised and content to be personalised.",
+    "p2": "You can configure your browser to refuse cookies, but this may affect the functionality of some sections of the website."
+  },
+  "consumidor": {
+    "title": "Consumer Information",
+    "breadcrumb": "Consumer",
+    "link": "True",
+    "link1": "http://www.arbitragemdeconsumo.org/",
+    "link2": "http://www.consumidor.pt/",
+    "p1": "In the event of a consumer dispute, consumers may refer the matter to the following alternative consumer dispute resolution entity:",
+    "p2": "CNIACC - National Information and Arbitration Centre for Consumer Disputes",
+    "p3": "Phone: 213 847 484 - Email: cniacc@fd.unl.pt - Website: <linkExt>http://www.arbitragemdeconsumo.org/</linkExt>",
+    "p4": "For updates and further information, visit the Consumer Portal at <linkExt>http://www.consumidor.pt/</linkExt>"
+  }
+}

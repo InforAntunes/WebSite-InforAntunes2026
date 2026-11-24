@@ -1,0 +1,32 @@
+{
+  "privacy": {
+    "title": "Política de Privacidad",
+    "breadcrumb": "Privacidad",
+    "p1": "InforAntunes, Lda. respeta la privacidad de sus usuarios y se compromete a proteger los datos personales recopilados a través de este sitio web, de conformidad con el Reglamento General de Protección de Datos (RGPD).",
+    "p2": "Los datos personales recopilados a través del formulario de contacto se utilizan exclusivamente para responder a las solicitudes enviadas y no se comparten con terceros sin el consentimiento del usuario.",
+    "p3": "Para ejercer sus derechos de acceso, rectificación, eliminación o portabilidad de datos, puede contactarnos en geral@inforantunes.com."
+  },
+  "terms": {
+    "title": "Términos y Condiciones",
+    "breadcrumb": "Términos",
+    "p1": "El acceso y uso del sitio web de InforAntunes está sujeto a los presentes Términos y Condiciones de Uso. Al utilizar este sitio web, el usuario acepta los términos aquí descritos.",
+    "p2": "InforAntunes se reserva el derecho de modificar el contenido de este sitio web sin previo aviso. La información proporcionada tiene carácter meramente informativo."
+  },
+  "cookies": {
+    "title": "Política de Cookies",
+    "breadcrumb": "Cookies",
+    "p1": "El sitio web de InforAntunes utiliza cookies para mejorar la experiencia de navegación. Las cookies son pequeños archivos de texto almacenados en su navegador que permiten reconocer visitas repetidas y personalizar el contenido.",
+    "p2": "Puede configurar su navegador para rechazar cookies, pero esto puede afectar la funcionalidad de algunas secciones del sitio web."
+  },
+  "consumidor": {
+    "title": "Información al Consumidor",
+    "breadcrumb": "Consumidor",
+    "link": "True",
+    "link1": "http://www.arbitragemdeconsumo.org/",
+    "link2": "http://www.consumidor.pt/",
+    "p1": "En caso de litigio de consumo, el consumidor puede recurrir a la siguiente entidad de resolución alternativa de litigios de consumo:",
+    "p2": "CNIACC - Centro Nacional de Información y Arbitraje de Conflictos de Consumo",
+    "p3": "Tel.: 213 847 484 - Email: cniacc@fd.unl.pt - Sitio web: <linkExt>http://www.arbitragemdeconsumo.org/</linkExt>",
+    "p4": "Para actualizaciones y más información, consulte el Portal del Consumidor en <linkExt>http://www.consumidor.pt/</linkExt>"
+  }
+}

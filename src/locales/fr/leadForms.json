@@ -1,0 +1,214 @@
+{
+  "common": {
+    "close": "Fermer le formulaire",
+    "selectPlaceholder": "Sélectionnez une option",
+    "fields": {
+      "company": {
+        "label": "Nom de l'entreprise",
+        "placeholder": "Nom de votre entreprise"
+      },
+      "contact": {
+        "label": "Nom du responsable",
+        "placeholder": "Prénom et nom"
+      },
+      "businessType": {
+        "label": "Type d'activité"
+      },
+      "nif": {
+        "label": "Numéro fiscal",
+        "placeholder": "Facultatif"
+      },
+      "dailyRevenue": {
+        "label": "Chiffre d'affaires journalier moyen"
+      },
+      "software": {
+        "label": "Logiciel de gestion utilisé",
+        "placeholder": "Ex. : WinRest, Zone Soft, XD ou autre"
+      },
+      "softwarePos": {
+        "label": "Logiciel de gestion / POS utilisé",
+        "placeholder": "Indiquez le logiciel actuel"
+      },
+      "phone": {
+        "label": "Téléphone",
+        "placeholder": "+351 000 000 000"
+      },
+      "email": {
+        "label": "E-mail professionnel",
+        "placeholder": "nom@entreprise.fr"
+      }
+    },
+    "revenueOptions": [
+      "Jusqu'à 500 €",
+      "500 € – 1 000 €",
+      "1 000 € – 3 000 €",
+      "Plus de 3 000 €",
+      "Je préfère ne pas répondre"
+    ],
+    "consentPrefix": "J'autorise le traitement de mes données afin de répondre à cette demande, conformément à la",
+    "privacyLink": "Politique de Confidentialité",
+    "privacyNote": "Vos données seront uniquement utilisées pour analyser cette demande et permettre à notre équipe commerciale de vous contacter.",
+    "sending": "Envoi de la demande...",
+    "errors": {
+      "required": "Ce champ est obligatoire.",
+      "email": "Saisissez un e-mail professionnel valide.",
+      "phone": "Saisissez un numéro de téléphone valide.",
+      "consent": "Vous devez accepter le traitement des données.",
+      "submit": "Impossible de finaliser la demande. Veuillez réessayer."
+    },
+    "success": {
+      "kicker": "Demande reçue",
+      "message": "Merci de nous avoir contactés ! Notre équipe analysera votre demande et vous contactera prochainement.",
+      "close": "Fermer"
+    }
+  },
+  "robotics": {
+    "solutionLabel": "Robotique de Service",
+    "title": "Trouvons la solution robotique idéale pour votre activité.",
+    "description": "Partagez quelques informations sur votre entreprise afin que nous puissions vous recommander la solution la plus adaptée.",
+    "businessOptions": [
+      "Restaurant",
+      "Hôtel",
+      "Café / Bar",
+      "Supermarché / Commerce",
+      "Autre"
+    ],
+    "submit": "Envoyer la demande"
+  },
+  "payments": {
+    "solutionLabel": "Paiements Automatisés",
+    "title": "Découvrez comment automatiser les paiements de votre activité.",
+    "description": "Aidez-nous à comprendre les besoins de votre exploitation afin de vous présenter la solution la plus adaptée.",
+    "businessOptions": [
+      "Restaurant",
+      "Café / Bar",
+      "Supermarché",
+      "Commerce de détail",
+      "Autre"
+    ],
+    "paymentPoints": {
+      "label": "Nombre de caisses / points de paiement",
+      "options": [
+        "1",
+        "2 à 3",
+        "4 à 5",
+        "Plus de 5"
+      ]
+    },
+    "submit": "Demander à être contacté"
+  },
+  "managementSoftware": {
+    "solutionLabel": "Logiciel de Gestion",
+    "title": "Trouvez la solution de gestion idéale pour votre activité.",
+    "description": "Partagez les besoins de votre exploitation afin que nous puissions vous recommander le logiciel le plus adapté.",
+    "businessOptions": [
+      "Restaurant",
+      "Café / Bar",
+      "Hôtel",
+      "Supermarché",
+      "Commerce de détail",
+      "Services",
+      "Autre"
+    ],
+    "salesPoints": {
+      "label": "Nombre de points de vente / caisses",
+      "options": [
+        "1",
+        "2 à 3",
+        "4 à 5",
+        "Plus de 5"
+      ]
+    },
+    "currentSoftware": {
+      "label": "Logiciel actuellement utilisé",
+      "placeholder": "Facultatif"
+    },
+    "needs": {
+      "label": "Besoins principaux",
+      "options": [
+        "Ventes et facturation",
+        "Stocks",
+        "Tables et commandes",
+        "Clients",
+        "Employés",
+        "Rapports et analyse",
+        "Autre"
+      ]
+    },
+    "submit": "Demander une démonstration"
+  },
+  "serviceQuote": {
+    "solutionLabel": "DEMANDE DE DEVIS",
+    "title": "Demandez un devis adapté à votre activité.",
+    "description": "Expliquez-nous ce que vous recherchez et notre équipe préparera une proposition adaptée aux besoins de votre entreprise.",
+    "services": {
+      "label": "Service souhaité",
+      "options": [
+        "Logiciel de Gestion",
+        "Support Informatique",
+        "Développement Sur Mesure",
+        "Paiements Automatisés",
+        "Robotique de Service",
+        "Matériel et Réseaux",
+        "Autre"
+      ]
+    },
+    "needDescription": {
+      "label": "Description du besoin",
+      "placeholder": "Décrivez le service, le défi ou l'objectif de votre entreprise."
+    },
+    "equipmentCount": {
+      "label": "Nombre approximatif de postes / équipements",
+      "placeholder": "Facultatif"
+    },
+    "submit": "Demander un devis",
+    "successMessage": "Merci pour votre demande de devis. Notre équipe analysera vos besoins et vous contactera prochainement."
+  },
+  "timeTracking": {
+    "solutionLabel": "SISTEMA PONTO",
+    "title": "Découvrez une manière plus simple de gérer les présences.",
+    "description": "Partagez quelques informations sur votre entreprise afin que nous préparions une démonstration adaptée à la taille et au fonctionnement de votre équipe.",
+    "employeeCount": {
+      "label": "Nombre de collaborateurs",
+      "options": [
+        "1 à 10",
+        "11 à 25",
+        "26 à 50",
+        "51 à 100",
+        "Plus de 100"
+      ]
+    },
+    "submit": "Demander une démonstration",
+    "successMessage": "Merci de nous avoir contactés ! Notre équipe analysera votre demande et vous contactera prochainement."
+  },
+  "cybersecurityInfrastructure": {
+    "title": "Demander une évaluation de l’infrastructure",
+    "description": "Décrivez les besoins de votre entreprise afin de préparer une évaluation.",
+    "solutionLabel": "Cybersécurité et Infrastructure",
+    "submit": "Demander une évaluation →",
+    "successMessage": "Démonstration terminée. La demande est prête pour une future intégration ; aucune donnée n’a été envoyée.",
+    "equipmentCount": {
+      "label": "Nombre d’utilisateurs/équipements",
+      "options": [
+        "1–10",
+        "11–25",
+        "26–50",
+        "51–100",
+        "100+"
+      ]
+    },
+    "needs": {
+      "label": "Besoin principal",
+      "options": [
+        "Réseaux",
+        "Sauvegarde",
+        "Serveurs",
+        "Pare-feu",
+        "Supervision",
+        "Équipements",
+        "Assistance technique",
+        "Autre"
+      ]
+    }
+  }
+}

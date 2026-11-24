@@ -1,0 +1,154 @@
+{
+  "hero": {
+    "label": "Tecnologia · Gestão · Automação",
+    "title1": "Tecnologia que",
+    "title2": "simplifica o seu",
+    "title3": "negócio.",
+    "description": "Software de gestão, automação de pagamentos, robótica de serviço e suporte informático especializado — tudo numa só parceria tecnológica."
+  },
+  "credibility": {
+    "label": "Reconhecimento institucional",
+    "pme_lider_sub": "IAPMEI · Reconhecimento nacional",
+    "pme_excel_sub": "IAPMEI · Distinção de excelência",
+    "payment_sub": "Infoline · Credibilidade financeira"
+  },
+  "about": {
+    "badge": "Sobre a empresa",
+    "title1": "Tecnologia com",
+    "title2": "experiência.",
+    "title3": "Pessoas com propósito.",
+    "p1": "A InforAntunes é uma empresa portuguesa especializada em tecnologia para empresas. Desde 1997, apoiamos organizações de diferentes setores com soluções de software, automação, suporte e hardware.",
+    "p2": "Com sede em Lourinhã, combinamos a proximidade de uma empresa regional com a abrangência nacional de um parceiro tecnológico de referência — reconhecido como PME Líder e PME Excelência.",
+    "cta": "Conheça a InforAntunes"
+  },
+  "services": {
+    "badge": "O que fazemos",
+    "title1": "Tecnologia aplicada",
+    "title2": "ao seu negócio.",
+    "viewAll": "Ver todos os serviços →",
+    "items": [
+      {
+        "num": "01",
+        "title": "Software de Gestão",
+        "desc": "POS e soluções integradas de gestão para comércio, restauração e hotelaria."
+      },
+      {
+        "num": "02",
+        "title": "Suporte Informático",
+        "desc": "Assistência técnica especializada, manutenção preventiva e suporte remoto e presencial."
+      },
+      {
+        "num": "03",
+        "title": "Desenvolvimento à Medida",
+        "desc": "Soluções personalizadas adaptadas às necessidades específicas de cada empresa."
+      },
+      {
+        "num": "04",
+        "title": "Pagamentos Automatizados",
+        "desc": "Sistemas automáticos de gestão de dinheiro que eliminam erros e aumentam a eficiência."
+      },
+      {
+        "num": "05",
+        "title": "Robótica de Serviço",
+        "desc": "Robôs Pudu para restauração, hotelaria e comércio — para apoiar operações de forma mais rápida e eficiente."
+      },
+      {
+        "num": "06",
+        "title": "Hardware e Redes",
+        "desc": "Infraestrutura informática, instalação de redes e equipamentos profissionais."
+      },
+      {
+        "num": "07",
+        "title": "Cibersegurança e Infraestrutura",
+        "desc": "Implementação e gestão de soluções de cibersegurança e infraestrutura informática para proteger os dados, sistemas e operações das empresas."
+      },
+      {
+        "num": "08",
+        "title": "Sistema Ponto",
+        "desc": "Gestão de horários, presenças, férias e equipas em Web e Mobile."
+      }
+    ]
+  },
+  "software": {
+    "badge": "Software de Gestão",
+    "title1": "Ferramentas que colocam",
+    "title2": "o seu negócio em movimento.",
+    "desc": "Soluções certificadas de POS e gestão hoteleira para diferentes setores de atividade.",
+    "viewAll": "Ver todos os softwares →",
+    "products": [
+      {
+        "cat": "POS · Restauração",
+        "name": "WinRest",
+        "desc": "Uma aplicação multilíngua direccionada a diferentes sistemas operativos e orientada para a restauração e similares. Com um interface simples e de fácil utilização, é excepcionalmente potente pela multiplicidade de configurações adaptáveis à diversidade deste mercado.",
+        "cta": "Saber mais →"
+      },
+      {
+        "cat": "Gestão · Multi-área",
+        "name": "XD",
+        "desc": "O mais simples e intuitivo software para o retalho, do pequeno comércio a uma rede de lojas que se adapta às necessidades do seu negócio.",
+        "cta": "Saber mais →"
+      },
+      {
+        "cat": "PMS · Restauração",
+        "name": "Zonesoft",
+        "desc": "Para um pequeno restaurante ou uma grande rede de fast food, para um advogado ou para um grande festival, a Zone Soft oferece as mais completas e integradas soluções para pontos de vendas fixos ou móveis, gestão comercial e faturação e gestão online.",
+        "cta": "Saber mais →"
+      }
+    ]
+  },
+  "payments": {
+    "badge": "Pagamentos Automatizados",
+    "title1": "Menos erros.",
+    "title2": "Mais controlo.",
+    "desc": "O Cashlogy automatiza a gestão de dinheiro em caixa, eliminando erros de contagem, reduzindo o tempo de fecho e aumentando a segurança do processo de pagamento.",
+    "features": [
+      "Contagem automática de notas e moedas",
+      "Registo e auditoria de cada transação",
+      "Integração com software de caixa existente",
+      "Redução de erros humanos no processo de pagamento"
+    ],
+    "cta": "Conhecer o Cashlogy →",
+    "floatLabel": "Gestão Automática"
+  },
+  "robotics": {
+    "badge": "Robótica de Serviço",
+    "title1": "A próxima geração",
+    "title2": "de atendimento",
+    "title3": "já chegou.",
+    "desc": "Os robôs Pudu Robotics automatizam tarefas de entrega, serviço e atendimento em restaurantes, hotéis e espaços comerciais — aumentando a eficiência e libertando as equipas para o que realmente importa.",
+    "contexts": ["Restauração", "Hotelaria", "Comércio", "Logística"],
+    "cta": "Conhecer o Pudu Robotics →"
+  },
+  "accompaniment": {
+    "badge": "Acompanhamento",
+    "title1": "Mais do que tecnologia.",
+    "title2": "Acompanhamento.",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Implementar",
+        "desc": "Instalação e configuração completa das soluções nas suas instalações."
+      },
+      {
+        "num": "02",
+        "title": "Integrar",
+        "desc": "Ligação com os sistemas existentes para uma experiência unificada."
+      },
+      {
+        "num": "03",
+        "title": "Acompanhar",
+        "desc": "Suporte técnico contínuo, formação e manutenção preventiva."
+      },
+      {
+        "num": "04",
+        "title": "Evoluir",
+        "desc": "Atualizações, melhorias e novas funcionalidades à medida que o seu negócio cresce."
+      }
+    ]
+  },
+  "finalCta": {
+    "badge": "Comece hoje",
+    "title": "Pronto para tornar o seu negócio mais eficiente?",
+    "desc": "Fale com a nossa equipa e descubra como a InforAntunes pode apoiar a sua empresa."
+  }
+}

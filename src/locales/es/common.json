@@ -1,0 +1,91 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre Nosotros",
+    "solutions": "Soluciones",
+    "services": "Servicios",
+    "contact": "Contacto",
+    "contactCta": "Contáctenos",
+    "suportCta": "Soporte Remoto"
+  },
+  "mega": {
+    "software": "Software de Gestión",
+    "payments": "Pagos Automatizados",
+    "robotics": "Robótica",
+    "eticadata_desc": "ERP y gestión empresarial",
+    "winrest_desc": "Gestión para restauración",
+    "xd_desc": "Plataforma de gestión XD",
+    "zonesoft_desc": "Software para restauración",
+    "sistema_ponto_desc": "Gestión de asistencia Web y Mobile",
+    "cashlogy_desc": "Gestión automática de efectivo",
+    "compact_desc": "Solución compacta de pagos",
+    "entrega_desc": "Entrega e instalación profesional",
+    "pudu_desc": "Robots de servicio para hostelería y restauración",
+    "ciberseguranca": "CIBERSEGURIDAD",
+    "cybersecurityInfrastructure": "Ciberseguridad e Infraestructura",
+    "cybersecurityInfrastructureDesc": "Redes, seguridad y continuidad del negocio"
+  },
+  "footer": {
+    "tagline": "Tecnología, software y automatización para empresas que quieren crecer con confianza.",
+    "company": "Empresa",
+    "solutionsCol": "Soluciones",
+    "recognition": "Reconocimiento",
+    "allRights": "Todos los derechos reservados.",
+    "address": "Rua José Silva Júnior, lote 41 A/B, loja 2 2530-184 Nadrupe - Lourinhã",
+    "phone": "+351 261 416 670",
+    "email": "geral@inforantunes.com",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "cookies": "Cookies",
+    "book": "Libro de Reclamaciones",
+    "consumer": "Información al Consumidor"
+  },
+  "cta": {
+    "contact": "Contáctenos",
+    "explore": "Explorar soluciones",
+    "learnMore": "Saber más",
+    "requestDemo": "Solicitar demostración",
+    "talkSpecialist": "Hablar con un especialista →",
+    "viewSolutions": "Ver soluciones",
+    "viewAll": "Ver todos",
+    "knowMore": "Conocer",
+    "send": "Enviar mensaje →",
+    "sending": "Enviando...",
+    "requestInstall": "Solicitar instalación →"
+  },
+  "breadcrumb": {
+    "home": "Inicio",
+    "about": "Sobre Nosotros",
+    "solutions": "Soluciones",
+    "software": "Software de Gestión",
+    "payments": "Pagos Automatizados",
+    "robotics": "Robótica",
+    "services": "Servicios",
+    "contact": "Contacto"
+  },
+  "badge": {
+    "pme_lider": "PME Líder",
+    "pme_excelencia": "PME Excelência",
+    "pagamento_pontual": "Pago Puntual",
+    "since": "Desde",
+    "active_support": "Soporte activo",
+    "official_partner": "Socio oficial",
+    "portugal": "Portugal",
+    "certified": "Empresa certificada"
+  },
+  "scroll": "Deslizar",
+  "notFound": {
+    "title": "Página no encontrada",
+    "desc": "La página que busca no existe o ha sido movida.",
+    "back": "Volver al inicio →"
+  },
+  "names": {
+    "xd": "XD",
+    "zonesoft": "ZoneSoft",
+    "winrest": "WinRest",
+    "cashlogy": "Cashlogy",
+    "sistema_ponto": "Control Horario",
+    "pudu": "Pudu Robotics",
+    "ciberseguranca": "Ciberseguridad"
+  }
+}

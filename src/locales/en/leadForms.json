@@ -1,0 +1,214 @@
+{
+  "common": {
+    "close": "Close form",
+    "selectPlaceholder": "Select an option",
+    "fields": {
+      "company": {
+        "label": "Company name",
+        "placeholder": "Your company name"
+      },
+      "contact": {
+        "label": "Contact person",
+        "placeholder": "First and last name"
+      },
+      "businessType": {
+        "label": "Business type"
+      },
+      "nif": {
+        "label": "Tax number",
+        "placeholder": "Optional"
+      },
+      "dailyRevenue": {
+        "label": "Average daily turnover"
+      },
+      "software": {
+        "label": "Management software used",
+        "placeholder": "E.g. WinRest, Zone Soft, XD or other"
+      },
+      "softwarePos": {
+        "label": "Management / POS software used",
+        "placeholder": "Enter your current software"
+      },
+      "phone": {
+        "label": "Phone",
+        "placeholder": "+351 000 000 000"
+      },
+      "email": {
+        "label": "Business email",
+        "placeholder": "name@company.com"
+      }
+    },
+    "revenueOptions": [
+      "Up to €500",
+      "€500 – €1,000",
+      "€1,000 – €3,000",
+      "More than €3,000",
+      "Prefer not to say"
+    ],
+    "consentPrefix": "I consent to the processing of my data in order to respond to this request, under the",
+    "privacyLink": "Privacy Policy",
+    "privacyNote": "Your data will only be used to assess this request and allow our sales team to contact you.",
+    "sending": "Sending request...",
+    "errors": {
+      "required": "This field is required.",
+      "email": "Enter a valid business email.",
+      "phone": "Enter a valid phone number.",
+      "consent": "You must consent to data processing.",
+      "submit": "We could not complete your request. Please try again."
+    },
+    "success": {
+      "kicker": "Request received",
+      "message": "Thank you for contacting us! Our team will review your request and contact you shortly.",
+      "close": "Close"
+    }
+  },
+  "robotics": {
+    "solutionLabel": "Service Robotics",
+    "title": "Let's find the ideal robotics solution for your business.",
+    "description": "Share some information about your company so we can recommend the most suitable solution.",
+    "businessOptions": [
+      "Restaurant",
+      "Hotel",
+      "Café / Bar",
+      "Supermarket / Retail",
+      "Other"
+    ],
+    "submit": "Send request"
+  },
+  "payments": {
+    "solutionLabel": "Automated Payments",
+    "title": "Discover how to automate your business payments.",
+    "description": "Help us understand your operation's needs so we can present the most suitable solution.",
+    "businessOptions": [
+      "Restaurant",
+      "Café / Bar",
+      "Supermarket",
+      "Retail",
+      "Other"
+    ],
+    "paymentPoints": {
+      "label": "Number of tills / payment points",
+      "options": [
+        "1",
+        "2 to 3",
+        "4 to 5",
+        "More than 5"
+      ]
+    },
+    "submit": "Request contact"
+  },
+  "managementSoftware": {
+    "solutionLabel": "Management Software",
+    "title": "Find the ideal management solution for your business.",
+    "description": "Share your operational needs so we can recommend the most suitable software.",
+    "businessOptions": [
+      "Restaurant",
+      "Café / Bar",
+      "Hotel",
+      "Supermarket",
+      "Retail",
+      "Services",
+      "Other"
+    ],
+    "salesPoints": {
+      "label": "Number of points of sale / tills",
+      "options": [
+        "1",
+        "2 to 3",
+        "4 to 5",
+        "More than 5"
+      ]
+    },
+    "currentSoftware": {
+      "label": "Software currently used",
+      "placeholder": "Optional"
+    },
+    "needs": {
+      "label": "Main requirements",
+      "options": [
+        "Sales and invoicing",
+        "Stock",
+        "Tables and orders",
+        "Customers",
+        "Employees",
+        "Reports and analysis",
+        "Other"
+      ]
+    },
+    "submit": "Request a demo"
+  },
+  "serviceQuote": {
+    "solutionLabel": "QUOTE REQUEST",
+    "title": "Request a quote tailored to your business.",
+    "description": "Tell us what you are looking for and our team will prepare a proposal suited to your company's needs.",
+    "services": {
+      "label": "Required service",
+      "options": [
+        "Management Software",
+        "IT Support",
+        "Custom Development",
+        "Automated Payments",
+        "Service Robotics",
+        "Hardware and Networks",
+        "Other"
+      ]
+    },
+    "needDescription": {
+      "label": "Description of your needs",
+      "placeholder": "Describe your company's required service, challenge or objective."
+    },
+    "equipmentCount": {
+      "label": "Approximate number of workstations / devices",
+      "placeholder": "Optional"
+    },
+    "submit": "Request a quote",
+    "successMessage": "Thank you for your quote request. Our team will review your needs and contact you shortly."
+  },
+  "timeTracking": {
+    "solutionLabel": "SISTEMA PONTO",
+    "title": "Discover a simpler way to manage attendance.",
+    "description": "Share some information about your company so we can prepare a demonstration suited to your team size and operation.",
+    "employeeCount": {
+      "label": "Number of employees",
+      "options": [
+        "1 to 10",
+        "11 to 25",
+        "26 to 50",
+        "51 to 100",
+        "More than 100"
+      ]
+    },
+    "submit": "Request a demo",
+    "successMessage": "Thank you for contacting us! Our team will review your request and contact you shortly."
+  },
+  "cybersecurityInfrastructure": {
+    "title": "Request an infrastructure assessment",
+    "description": "Tell us what your company needs so we can prepare an assessment.",
+    "solutionLabel": "Cybersecurity and Infrastructure",
+    "submit": "Request an assessment →",
+    "successMessage": "Demo completed. Your request is ready for future integration; no data was sent.",
+    "equipmentCount": {
+      "label": "Number of users/devices",
+      "options": [
+        "1–10",
+        "11–25",
+        "26–50",
+        "51–100",
+        "100+"
+      ]
+    },
+    "needs": {
+      "label": "Main requirement",
+      "options": [
+        "Networks",
+        "Backup",
+        "Servers",
+        "Firewall",
+        "Monitoring",
+        "Equipment",
+        "Technical support",
+        "Other"
+      ]
+    }
+  }
+}

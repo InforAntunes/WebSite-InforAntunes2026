@@ -1,0 +1,159 @@
+{
+  "hero": {
+    "label": "Technologie · Gestion · Automatisation",
+    "title1": "La technologie qui",
+    "title2": "simplifie votre",
+    "title3": "activité.",
+    "description": "Logiciels de gestion, automatisation des paiements, robotique de service et support informatique spécialisé — le tout en un seul partenariat technologique."
+  },
+  "credibility": {
+    "label": "Reconnaissance institutionnelle",
+    "pme_lider_sub": "IAPMEI · Reconnaissance nationale",
+    "pme_excel_sub": "IAPMEI · Distinction d'excellence",
+    "payment_sub": "Infoline · Crédibilité financière"
+  },
+  "about": {
+    "badge": "À propos de l'entreprise",
+    "title1": "La technologie avec",
+    "title2": "l'expérience.",
+    "title3": "Des personnes avec une vision.",
+    "p1": "InforAntunes est une entreprise portugaise spécialisée dans la technologie pour les entreprises. Depuis 1997, nous accompagnons des organisations de différents secteurs avec des solutions logicielles, d'automatisation, de support et de matériel informatique.",
+    "p2": "Basée à Lourinhã, nous combinons la proximité d'une entreprise régionale avec la portée nationale d'un partenaire technologique de référence — reconnu PME Líder et PME Excelência.",
+    "cta": "Découvrir InforAntunes"
+  },
+  "services": {
+    "badge": "Ce que nous faisons",
+    "title1": "La technologie appliquée",
+    "title2": "à votre activité.",
+    "viewAll": "Voir tous les services →",
+    "items": [
+      {
+        "num": "01",
+        "title": "Logiciels de Gestion",
+        "desc": "POS et solutions de gestion intégrées pour le commerce, la restauration et l'hôtellerie."
+      },
+      {
+        "num": "02",
+        "title": "Support Informatique",
+        "desc": "Assistance technique spécialisée, maintenance préventive et support à distance et sur site."
+      },
+      {
+        "num": "03",
+        "title": "Développement Sur Mesure",
+        "desc": "Solutions personnalisées adaptées aux besoins spécifiques de chaque entreprise."
+      },
+      {
+        "num": "04",
+        "title": "Paiements Automatisés",
+        "desc": "Systèmes automatiques de gestion des espèces qui éliminent les erreurs et augmentent l'efficacité."
+      },
+      {
+        "num": "05",
+        "title": "Robotique de Service",
+        "desc": "Robots Pudu pour la restauration, l’hôtellerie et le commerce — pour accompagner les opérations de manière plus rapide et efficace."
+      },
+      {
+        "num": "06",
+        "title": "Matériel et Réseaux",
+        "desc": "Infrastructure informatique, installation de réseaux et équipements professionnels."
+      },
+      {
+        "num": "07",
+        "title": "Cybersécurité et Infrastructure",
+        "desc": "Déploiement et gestion de solutions de cybersécurité et d’infrastructure informatique pour protéger les données, systèmes et activités des entreprises."
+      },
+      {
+        "num": "08",
+        "title": "Sistema Ponto",
+        "desc": "Gestion des horaires, présences, congés et équipes sur Web et Mobile."
+      }
+    ]
+  },
+  "software": {
+    "badge": "Logiciels de Gestion",
+    "title1": "Des outils qui font",
+    "title2": "avancer votre activité.",
+    "desc": "Solutions POS et de gestion hôtelière certifiées pour différents secteurs d’activité.",
+    "viewAll": "Voir tous les logiciels →",
+    "products": [
+      {
+        "cat": "POS · Restauration",
+        "name": "WinRest",
+        "desc": "Une application multilingue conçue pour différents systèmes d’exploitation et destinée à la restauration et aux activités similaires. Son interface simple et intuitive offre une puissance exceptionnelle grâce à de nombreuses configurations adaptées à la diversité de ce marché.",
+        "cta": "En savoir plus →"
+      },
+      {
+        "cat": "Gestion · Multi-secteur",
+        "name": "XD",
+        "desc": "Le logiciel de commerce de détail le plus simple et intuitif, d’une petite boutique à une chaîne de magasins, qui s’adapte aux besoins de votre activité.",
+        "cta": "En savoir plus →"
+      },
+      {
+        "cat": "PMS · Restauration",
+        "name": "Zonesoft",
+        "desc": "D’un petit restaurant à une grande chaîne de restauration rapide, d’un avocat à un grand festival, Zone Soft propose des solutions complètes et intégrées pour les points de vente fixes ou mobiles, la gestion commerciale, la facturation et la gestion en ligne.",
+        "cta": "En savoir plus →"
+      }
+    ]
+  },
+  "payments": {
+    "badge": "Paiements Automatisés",
+    "title1": "Moins d'erreurs.",
+    "title2": "Plus de contrôle.",
+    "desc": "Cashlogy automatise la gestion des espèces en caisse, éliminant les erreurs de comptage, réduisant le temps de clôture et renforçant la sécurité du processus de paiement.",
+    "features": [
+      "Comptage automatique des billets et pièces",
+      "Enregistrement et audit de chaque transaction",
+      "Intégration avec le logiciel de caisse existant",
+      "Réduction des erreurs humaines dans le processus de paiement"
+    ],
+    "cta": "Découvrir Cashlogy →",
+    "floatLabel": "Gestion Automatique"
+  },
+  "robotics": {
+    "badge": "Robotique de Service",
+    "title1": "La prochaine génération",
+    "title2": "de service",
+    "title3": "est déjà là.",
+    "desc": "Les robots Pudu Robotics automatisent les tâches de livraison, de service et d'accueil dans les restaurants, hôtels et espaces commerciaux — améliorant l'efficacité et libérant les équipes.",
+    "contexts": [
+      "Restauration",
+      "Hôtellerie",
+      "Commerce",
+      "Logistique"
+    ],
+    "cta": "Découvrir Pudu Robotics →"
+  },
+  "accompaniment": {
+    "badge": "Accompagnement",
+    "title1": "Plus que la technologie.",
+    "title2": "Un accompagnement.",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Mettre en œuvre",
+        "desc": "Installation et configuration complète des solutions dans vos locaux."
+      },
+      {
+        "num": "02",
+        "title": "Intégrer",
+        "desc": "Connexion avec les systèmes existants pour une expérience unifiée."
+      },
+      {
+        "num": "03",
+        "title": "Accompagner",
+        "desc": "Support technique continu, formation et maintenance préventive."
+      },
+      {
+        "num": "04",
+        "title": "Évoluer",
+        "desc": "Mises à jour, améliorations et nouvelles fonctionnalités au fil de la croissance de votre activité."
+      }
+    ]
+  },
+  "finalCta": {
+    "badge": "Commencez aujourd'hui",
+    "title": "Prêt à rendre votre activité plus efficace ?",
+    "desc": "Parlez à notre équipe et découvrez comment InforAntunes peut soutenir votre entreprise."
+  }
+}

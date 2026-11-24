@@ -1,0 +1,214 @@
+{
+  "common": {
+    "close": "Fechar formulário",
+    "selectPlaceholder": "Selecione uma opção",
+    "fields": {
+      "company": {
+        "label": "Nome da empresa",
+        "placeholder": "Nome da sua empresa"
+      },
+      "contact": {
+        "label": "Nome do responsável",
+        "placeholder": "Nome e apelido"
+      },
+      "businessType": {
+        "label": "Tipo de negócio"
+      },
+      "nif": {
+        "label": "NIF",
+        "placeholder": "Opcional"
+      },
+      "dailyRevenue": {
+        "label": "Faturação média diária"
+      },
+      "software": {
+        "label": "Software de gestão utilizado",
+        "placeholder": "Ex.: WinRest, Zone Soft, XD ou outro"
+      },
+      "softwarePos": {
+        "label": "Software de gestão / POS utilizado",
+        "placeholder": "Indique o software atual"
+      },
+      "phone": {
+        "label": "Telefone",
+        "placeholder": "+351 000 000 000"
+      },
+      "email": {
+        "label": "Email profissional",
+        "placeholder": "nome@empresa.pt"
+      }
+    },
+    "revenueOptions": [
+      "Até 500 €",
+      "500 € – 1.000 €",
+      "1.000 € – 3.000 €",
+      "Mais de 3.000 €",
+      "Prefiro não informar"
+    ],
+    "consentPrefix": "Autorizo o tratamento dos meus dados para resposta a este pedido, nos termos da",
+    "privacyLink": "Política de Privacidade",
+    "privacyNote": "Os seus dados serão utilizados apenas para analisar este pedido e permitir o contacto da nossa equipa comercial.",
+    "sending": "A enviar pedido...",
+    "errors": {
+      "required": "Este campo é obrigatório.",
+      "email": "Introduza um email profissional válido.",
+      "phone": "Introduza um número de telefone válido.",
+      "consent": "É necessário aceitar o tratamento de dados.",
+      "submit": "Não foi possível concluir o pedido. Tente novamente."
+    },
+    "success": {
+      "kicker": "Pedido recebido",
+      "message": "Obrigado pelo seu contacto! A nossa equipa irá analisar o seu pedido e entrará em contacto consigo brevemente.",
+      "close": "Fechar"
+    }
+  },
+  "robotics": {
+    "solutionLabel": "Robótica de Serviço",
+    "title": "Vamos encontrar a solução de robótica ideal para o seu negócio.",
+    "description": "Partilhe algumas informações sobre a sua empresa para que possamos recomendar a solução mais adequada.",
+    "businessOptions": [
+      "Restaurante",
+      "Hotel",
+      "Café / Bar",
+      "Supermercado / Comércio",
+      "Outro"
+    ],
+    "submit": "Enviar pedido"
+  },
+  "payments": {
+    "solutionLabel": "Pagamentos Automatizados",
+    "title": "Descubra como automatizar os pagamentos do seu negócio.",
+    "description": "Ajude-nos a perceber as necessidades da sua operação para apresentarmos a solução mais adequada.",
+    "businessOptions": [
+      "Restaurante",
+      "Café / Bar",
+      "Supermercado",
+      "Comércio a retalho",
+      "Outro"
+    ],
+    "paymentPoints": {
+      "label": "Número de caixas / pontos de pagamento",
+      "options": [
+        "1",
+        "2 a 3",
+        "4 a 5",
+        "Mais de 5"
+      ]
+    },
+    "submit": "Pedir contacto"
+  },
+  "managementSoftware": {
+    "solutionLabel": "Software de Gestão",
+    "title": "Encontre a solução de gestão ideal para o seu negócio.",
+    "description": "Partilhe as necessidades da sua operação para recomendarmos o software mais adequado.",
+    "businessOptions": [
+      "Restaurante",
+      "Café / Bar",
+      "Hotel",
+      "Supermercado",
+      "Comércio a retalho",
+      "Serviços",
+      "Outro"
+    ],
+    "salesPoints": {
+      "label": "Número de pontos de venda / caixas",
+      "options": [
+        "1",
+        "2 a 3",
+        "4 a 5",
+        "Mais de 5"
+      ]
+    },
+    "currentSoftware": {
+      "label": "Software atualmente utilizado",
+      "placeholder": "Opcional"
+    },
+    "needs": {
+      "label": "Principais necessidades",
+      "options": [
+        "Vendas e faturação",
+        "Stocks",
+        "Mesas e pedidos",
+        "Clientes",
+        "Funcionários",
+        "Relatórios e análise",
+        "Outro"
+      ]
+    },
+    "submit": "Pedir demonstração"
+  },
+  "serviceQuote": {
+    "solutionLabel": "PEDIDO DE ORÇAMENTO",
+    "title": "Peça um orçamento à medida do seu negócio.",
+    "description": "Partilhe connosco o que procura e a nossa equipa irá preparar uma proposta adequada às necessidades da sua empresa.",
+    "services": {
+      "label": "Serviço pretendido",
+      "options": [
+        "Software de Gestão",
+        "Suporte Informático",
+        "Desenvolvimento à Medida",
+        "Pagamentos Automatizados",
+        "Robótica de Serviço",
+        "Hardware e Redes",
+        "Outro"
+      ]
+    },
+    "needDescription": {
+      "label": "Descrição da necessidade",
+      "placeholder": "Descreva o serviço, desafio ou objetivo da sua empresa."
+    },
+    "equipmentCount": {
+      "label": "Número aproximado de postos / equipamentos",
+      "placeholder": "Opcional"
+    },
+    "submit": "Pedir orçamento",
+    "successMessage": "Obrigado pelo seu pedido de orçamento. A nossa equipa irá analisar as suas necessidades e entrará em contacto consigo brevemente."
+  },
+  "timeTracking": {
+    "solutionLabel": "SISTEMA PONTO",
+    "title": "Descubra uma forma mais simples de gerir a assiduidade.",
+    "description": "Partilhe algumas informações sobre a sua empresa para prepararmos uma demonstração adequada à dimensão e operação da sua equipa.",
+    "employeeCount": {
+      "label": "Número de colaboradores",
+      "options": [
+        "1 a 10",
+        "11 a 25",
+        "26 a 50",
+        "51 a 100",
+        "Mais de 100"
+      ]
+    },
+    "submit": "Pedir demonstração",
+    "successMessage": "Obrigado pelo seu contacto! A nossa equipa irá analisar o seu pedido e entrará em contacto consigo brevemente."
+  },
+  "cybersecurityInfrastructure": {
+    "title": "Pedir avaliação de infraestrutura",
+    "description": "Conte-nos o que a sua empresa precisa para prepararmos uma avaliação.",
+    "solutionLabel": "Cibersegurança e Infraestrutura",
+    "submit": "Pedir avaliação →",
+    "successMessage": "Demonstração concluída. O pedido está preparado para futura integração; não foram enviados dados.",
+    "equipmentCount": {
+      "label": "Número de utilizadores/equipamentos",
+      "options": [
+        "1–10",
+        "11–25",
+        "26–50",
+        "51–100",
+        "100+"
+      ]
+    },
+    "needs": {
+      "label": "Necessidade principal",
+      "options": [
+        "Redes",
+        "Backup",
+        "Servidores",
+        "Firewall",
+        "Monitorização",
+        "Equipamentos",
+        "Suporte técnico",
+        "Outro"
+      ]
+    }
+  }
+}

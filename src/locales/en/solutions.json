@@ -1,0 +1,414 @@
+{
+  "hub": {
+    "badge": "Technology portfolio",
+    "title": "Solutions for every",
+    "subtitle": "area of your business.",
+    "desc": "Management software, payment automation and service robotics — a complete technology ecosystem for modern businesses.",
+    "cat01": "Category 01",
+    "cat02": "Category 02",
+    "cat03": "Category 03",
+    "softwareDesc": "Certified POS solutions for retail, restaurants, hospitality and industry. Integrated, efficient management adapted to the Portuguese market.",
+    "paymentsDesc": "Automate cash management at the till. Fewer errors, more control and greater operational efficiency in the payment process.",
+    "roboticsDesc": "Pudu Robotics partners in Portugal. Service robots for restaurants, hotels and commercial spaces that boost efficiency and improve customer experience.",
+    "viewSoftware": "View all software →",
+    "viewPayments": "View payment solutions →",
+    "viewRobotics": "View Pudu Robotics →",
+    "noSolution": "Not sure which solution is right for you?",
+    "noSolutionDesc": "Talk to our team. We analyse your business needs and recommend the most suitable solution.",
+    "entregaLabel": "Installation & Logistics"
+  },
+  "software": {
+    "hero": {
+      "title": "Management Software",
+      "desc": "Certified POS solutions for different industry sectors. Integrated, efficient management adapted to the Portuguese market."
+    },
+    "products": [
+      {
+        "cat": "POS · Food Service",
+        "name": "WinRest",
+        "desc": "Management software for restaurants, bars and cafés. Table management, digital orders, integrated billing and real-time reports.",
+        "tags": [
+          "POS",
+          "Table Management",
+          "Orders",
+          "Reports",
+          "Multi-site"
+        ]
+      },
+      {
+        "cat": "Management · Multi-sector",
+        "name": "XD",
+        "desc": "Versatile management platform with configurable modules for different business sectors. Adaptable to each company's specific needs.",
+        "tags": [
+          "Modular",
+          "Management",
+          "Invoicing",
+          "Reports",
+          "Flexible"
+        ]
+      },
+      {
+        "cat": "POS · Food Service",
+        "name": "Zone Soft",
+        "desc": "Complete management solution for restaurants and bars. Orders, table management, invoicing, stock control and integration with delivery platforms.",
+        "tags": [
+          "POS",
+          "Table Management",
+          "Tableside Orders",
+          "Invoicing",
+          "Delivery"
+        ]
+      }
+    ],
+    "ctaPrefix": "Learn more about"
+  },
+  "winrest": {
+    "category": "POS · Food Service Software",
+    "tagline": "Complete management for restaurants, bars and cafés.",
+    "description": "WinRest is a POS management software specially developed for the food service sector. Table management, digital orders, integrated billing and full operational control.",
+    "featuresTitle": "What WinRest offers.",
+    "sectorsTitle": "Who is WinRest for?",
+    "ctaTitle": "Want to know more about WinRest?",
+    "ctaDesc": "Our team is available for a personalised demonstration.",
+    "features": [
+      "Table and room management",
+      "Digital orders via tablet",
+      "Certified electronic billing",
+      "Kitchen display system (KDS)",
+      "Bar and kitchen stock management",
+      "Real-time sales reports",
+      "Shift and staff management",
+      "Synchronised multi-POS",
+      "Integration with automated payments"
+    ],
+    "applications": [
+      "Restaurants",
+      "Bars and cafés",
+      "Pastry shops",
+      "Pizzerias",
+      "Fast food",
+      "Catering and banquets",
+      "Snack bars",
+      "Corporate canteens"
+    ]
+  },
+  "xd": {
+    "category": "Management Software · Multi-sector",
+    "tagline": "Modular management platform adaptable to your business.",
+    "description": "XD is a versatile management platform with configurable modules for different business sectors. It adapts to the specific needs of each company, growing as the business evolves.",
+    "featuresTitle": "What XD offers.",
+    "sectorsTitle": "Who is XD for?",
+    "ctaTitle": "Want to know more about XD?",
+    "ctaDesc": "Our team is available for a personalised demonstration.",
+    "features": [
+      "Modular and scalable architecture",
+      "Certified electronic invoicing",
+      "Customer and supplier management",
+      "Stock control",
+      "Configurable reports",
+      "Management dashboard",
+      "Integration with other systems",
+      "Multi-company support",
+      "Web browser access"
+    ],
+    "applications": [
+      "Service SMEs",
+      "Consultancies",
+      "Agencies",
+      "Specialist retail",
+      "Workshops and repairs",
+      "Distribution companies",
+      "Multi-sector businesses"
+    ]
+  },
+  "zonesoft": {
+    "category": "POS · Restaurant Management Software",
+    "tagline": "Complete restaurant management — from ordering to the kitchen and billing.",
+    "description": "Zone Soft (ZS rest) is a complete POS solution for restaurants, bars and food and beverage establishments.",
+    "featuresTitle": "What Zone Soft offers.",
+    "sectorsTitle": "Who is Zone Soft for?",
+    "ctaTitle": "Want to know more about Zone Soft?",
+    "ctaDesc": "Our team is available for a personalised demonstration.",
+    "features": [
+      "Table management and visual floor plan",
+      "Tableside ordering (PDA / Tablet)",
+      "Kitchen management and preparation screens (ZS monitor)",
+      "Quick billing and bill splitting",
+      "Integration with Uber Eats, Glovo, and Grubtech",
+      "Integration with reservation platforms (TheFork)",
+      "Inventory control and product recipes/specifications",
+      "Self-service kiosks and QR code ordering",
+      "Real-time sales, cash, and billing reports"
+    ],
+    "applications": [
+      "Restaurants",
+      "Bars and Pubs",
+      "Cafés and Pastry Shops",
+      "Pizzerias",
+      "Burger Joints and Fast Food",
+      "Food Trucks",
+      "Takeaway and Delivery",
+      "Kiosks and Beach Clubs"
+    ]
+  },
+  "sistemaPonto": {
+    "category": "ATTENDANCE MANAGEMENT · WEB AND MOBILE",
+    "tagline": "Simple attendance control for employees and management.",
+    "description": "An intelligent team attendance management solution, available on Web and Mobile. It simplifies schedules, attendance, holidays, absences and daily operations.",
+    "heroImageAlt": "Sistema Ponto Web and Mobile interface",
+    "featuresTitle": "What Sistema Ponto offers.",
+    "sectorsTitle": "Who is Sistema Ponto for?",
+    "ctaTitle": "Want to simplify your team's time management?",
+    "ctaDesc": "Request a demonstration and discover how Sistema Ponto can make attendance simpler, clearer and more efficient.",
+    "features": [
+      "Clock-in and clock-out records",
+      "Geolocation at the time of registration",
+      "Schedule and shift control",
+      "Employee management",
+      "Time bank",
+      "Holidays, public holidays and absences",
+      "Absence justifications",
+      "Attendance reports",
+      "Real-time activity dashboard"
+    ],
+    "platforms": {
+      "label": "PLATFORMS",
+      "title": "One solution for employees and management.",
+      "items": [
+        {
+          "title": "Mobile application",
+          "description": "A simple experience for every employee to record and monitor attendance wherever they are.",
+          "items": [
+            "Secure login",
+            "Clock in and out",
+            "Geolocation",
+            "History",
+            "Justifications",
+            "Holidays"
+          ]
+        },
+        {
+          "title": "Web dashboard",
+          "description": "A centralised, up-to-date view to manage attendance and monitor team operations.",
+          "items": [
+            "Attendance dashboard",
+            "Presence map",
+            "Hours metrics",
+            "Time bank",
+            "Activity charts"
+          ]
+        }
+      ]
+    },
+    "applications": [
+      "Retail and commerce",
+      "Restaurants and hospitality",
+      "Service companies",
+      "Industry and logistics",
+      "Construction",
+      "Healthcare and social support",
+      "Mobile and field teams",
+      "Multi-location companies"
+    ]
+  },
+  "payments": {
+    "hero": {
+      "title1": "Fewer errors.",
+      "title2": "More control.",
+      "desc": "Automatic cash management systems that reduce errors, increase security and make the payment process more efficient."
+    },
+    "products": [
+      {
+        "name": "Cashlogy",
+        "desc": "Complete automatic cash management system. Counts, authenticates, stores and processes notes and coins with total security.",
+        "features": [
+          "Automatic counting",
+          "Full audit",
+          "POS integration",
+          "Real-time reports"
+        ]
+      },
+      {
+        "name": "Installation & Logistics",
+        "desc": "Professional delivery, installation and configuration service for automated payment systems.",
+        "features": [
+          "On-site delivery",
+          "Professional installation",
+          "Full configuration",
+          "Training included"
+        ]
+      }
+    ],
+    "ctaTitle": "Ready to automate your payments?",
+    "ctaDesc": "Contact us for a no-commitment demonstration."
+  },
+  "cashlogy": {
+    "category": "Automated Payments · Cash Management",
+    "tagline": "Complete automation of cash management at the till.",
+    "description": "Cashlogy automates the counting, authentication, storage and processing of notes and coins. It eliminates human error, increases security and frees the team to focus on what truly matters.",
+    "featuresTitle": "What Cashlogy offers.",
+    "sectorsTitle": "Who is Cashlogy for?",
+    "ctaTitle": "Want to know more about Cashlogy?",
+    "ctaDesc": "Our team is available for a personalised demonstration.",
+    "features": [
+      "Automatic counting of notes and coins",
+      "Counterfeit note detection",
+      "Secure storage in integrated safe",
+      "Integration with POS software",
+      "Real-time movement reports",
+      "Full audit of every transaction",
+      "Automatic change fund",
+      "Configurable alerts and notifications",
+      "Intuitive touchscreen interface"
+    ],
+    "applications": [
+      "Restaurants",
+      "Supermarkets",
+      "Retailers",
+      "Pharmacies",
+      "Fuel stations",
+      "Cafés and bars",
+      "Hotels",
+      "Convenience stores"
+    ]
+  },
+  "entrega": {
+    "hero": {
+      "title": "Installation & Logistics",
+      "desc": "A complete, professional delivery, installation and configuration service for automated payment systems — so the technology works from day one."
+    },
+    "steps": [
+      {
+        "num": "01",
+        "title": "On-site delivery",
+        "desc": "Equipment is delivered to your premises by our specialist technical team, with all documentation and accessories required."
+      },
+      {
+        "num": "02",
+        "title": "Professional installation",
+        "desc": "Complete technical installation, including connection to electrical systems, network and integration with existing POS software."
+      },
+      {
+        "num": "03",
+        "title": "Configuration and testing",
+        "desc": "Detailed configuration of all system parameters and full testing before handover to the client."
+      },
+      {
+        "num": "04",
+        "title": "Team training",
+        "desc": "Practical training for operational teams to ensure correct and efficient use from day one."
+      }
+    ]
+  },
+  "robotics": {
+    "hero": {
+      "tags": [
+        "ROBOTICS",
+        "AUTOMATION",
+        "SERVICE"
+      ],
+      "tagline": "The next generation of service is already here.",
+      "desc": "Pudu Robotics robots automate repetitive service and delivery tasks in restaurants, hotels and commercial spaces — increasing efficiency and improving customer experience.",
+      "partnerLabel": "Official partner",
+      "partnerCountry": "Portugal"
+    },
+    "contexts": {
+      "badge": "Applications",
+      "title": "Where Pudu robots make a difference.",
+      "items": [
+        {
+          "icon": "🍽",
+          "title": "Restaurants",
+          "desc": "Delivering dishes, drinks and desserts to tables with full autonomy."
+        },
+        {
+          "icon": "🏨",
+          "title": "Hotels",
+          "desc": "Room service delivery of food, towels and amenities to guests."
+        },
+        {
+          "icon": "🏪",
+          "title": "Retail",
+          "desc": "Customer service support in shops and shopping centres."
+        },
+        {
+          "icon": "📦",
+          "title": "Internal logistics",
+          "desc": "Moving materials between departments and warehouses."
+        }
+      ]
+    },
+    "benefits": {
+      "badge": "Benefits",
+      "title": "Greater efficiency. Better experience.",
+      "items": [
+        "Reduction of unnecessary staff travel",
+        "Freeing staff for higher-value tasks",
+        "Greater service capacity without expanding the team",
+        "A distinctive experience for customers",
+        "Continuous operation without breaks",
+        "Measurable return on investment"
+      ]
+    },
+    "cta": {
+      "title": "Ready to experience the future of service?",
+      "desc": "Contact us for a Pudu Robotics robot demonstration."
+    }
+  },
+  "productPage": {
+    "featuresLabel": "Features",
+    "sectorsLabel": "Application sectors",
+    "demoBtn": "Request a demo →",
+    "specialistBtn": "Talk to a specialist",
+    "viewOthers": "View other solutions",
+    "ctaTitle": "Want to know more about",
+    "ctaDesc": "Our team is available for a personalised demonstration.",
+    "forWhom": "Who is"
+  },
+  "cybersecurityInfrastructure": {
+    "name": "Cybersecurity and Infrastructure",
+    "category": "CYBERSECURITY · INFRASTRUCTURE",
+    "tagline": "Protect your business with a stable, secure technology infrastructure that is ready to grow.",
+    "description": "We implement and support networks, equipment, servers, backups and IT security solutions tailored to your operations.",
+    "heroImageAlt": "Professional server and network environment",
+    "primaryCta": "Request an assessment →",
+    "secondaryCta": "Talk to a specialist",
+    "featuresTitle": "What our solution offers.",
+    "features": [
+      "Infrastructure audit and diagnosis",
+      "Structured networks and connectivity",
+      "Firewall and network protection",
+      "Device and user security",
+      "Backups and data recovery",
+      "Server configuration and maintenance",
+      "Preventive monitoring",
+      "Access and permission management",
+      "Remote and on-site technical support"
+    ],
+    "areas": {
+      "label": "AREAS OF EXPERTISE",
+      "title": "Infrastructure built for your business.",
+      "items": [
+        "Networks and connectivity",
+        "Servers and storage",
+        "IT security",
+        "Backup and recovery",
+        "Professional equipment",
+        "Monitoring and maintenance"
+      ]
+    },
+    "sectorsTitle": "Who is this solution for?",
+    "applications": [
+      "Commerce and retail",
+      "Restaurants and hospitality",
+      "Service companies",
+      "Offices and consultancies",
+      "Healthcare and social care",
+      "Industry and logistics",
+      "Multi-site companies",
+      "Growing businesses"
+    ],
+    "ctaTitle": "Is your infrastructure ready to protect your business?",
+    "ctaDesc": "Talk to our team and discover how we can strengthen the security, stability and performance of your technology."
+  }
+}

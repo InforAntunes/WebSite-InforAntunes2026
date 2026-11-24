@@ -1,0 +1,113 @@
+{
+  "hero": {
+    "badge": "Lo que hacemos",
+    "title": "Tecnología aplicada",
+    "subtitle": "a su negocio.",
+    "desc": "Desde la implementación de software hasta la robótica, cubrimos todas las necesidades tecnológicas de su empresa con un equipo especializado."
+  },
+  "items": [
+    {
+      "num": "01",
+      "title": "Software de Gestión",
+      "desc": "Implementación y soporte de software de gestión y POS adaptado a su negocio.",
+      "items": [
+        "POS y facturación",
+        "Formación de usuarios",
+        "Soporte especializado"
+      ],
+      "category": "SOFTWARE · GESTIÓN"
+    },
+    {
+      "num": "02",
+      "title": "Soporte Informático",
+      "desc": "Asistencia informática remota y presencial para mantener su actividad en marcha.",
+      "items": [
+        "Soporte remoto y presencial",
+        "Mantenimiento preventivo",
+        "Diagnóstico y reparación"
+      ],
+      "category": "ASISTENCIA · MANTENIMIENTO"
+    },
+    {
+      "num": "03",
+      "title": "Desarrollo a Medida",
+      "desc": "Soluciones e integraciones personalizadas para los retos específicos de su empresa.",
+      "items": [
+        "Análisis de necesidades",
+        "Desarrollo a medida",
+        "Integración de sistemas"
+      ],
+      "category": "DESARROLLO · INTEGRACIÓN"
+    },
+    {
+      "num": "04",
+      "title": "Pagos Automatizados",
+      "desc": "Gestión automática de efectivo para pagos más seguros y eficientes.",
+      "items": [
+        "Integración con POS",
+        "Recuento automático",
+        "Instalación y soporte"
+      ],
+      "category": "PAGOS · AUTOMATIZACIÓN"
+    },
+    {
+      "num": "05",
+      "title": "Robótica de Servicio",
+      "desc": "Robots de servicio Pudu para apoyar a los equipos y mejorar la atención.",
+      "items": [
+        "Consultoría e instalación",
+        "Formación de equipos",
+        "Soporte continuo"
+      ],
+      "category": "ROBÓTICA · AUTOMATIZACIÓN"
+    },
+    {
+      "num": "06",
+      "title": "Hardware y Redes",
+      "desc": "Equipos y conectividad profesional preparados para su actividad.",
+      "items": [
+        "Equipos profesionales",
+        "Redes estructuradas",
+        "Configuración y soporte"
+      ],
+      "category": "HARDWARE · REDES"
+    },
+    {
+      "num": "07",
+      "slug": "ciberseguranca-infraestrutura",
+      "category": "CIBERSEGURIDAD · INFRAESTRUCTURA",
+      "title": "Ciberseguridad e Infraestructura",
+      "desc": "Redes, seguridad y continuidad del negocio.",
+      "items": [
+        "Protección de red",
+        "Backup y recuperación",
+        "Monitorización preventiva"
+      ]
+    },
+    {
+      "num": "08",
+      "slug": "sistema-ponto",
+      "title": "Sistema Ponto",
+      "category": "GESTIÓN DE ASISTENCIA",
+      "desc": "Gestión de horarios, asistencia, vacaciones y equipos en Web y Mobile.",
+      "items": [
+        "Web + Mobile",
+        "Geolocalización",
+        "Panel de asistencia"
+      ]
+    }
+  ],
+  "systemPoint": {
+    "learnMore": "Saber más"
+  },
+  "infra": {
+    "badge": "Infraestructura",
+    "title": "Hardware, redes e infraestructura informática.",
+    "desc": "Suministramos, instalamos y configuramos toda la infraestructura informática necesaria para su negocio.",
+    "cta": "Solicitar presupuesto →"
+  },
+  "cta": {
+    "title": "¿Necesita un servicio específico?",
+    "desc": "Hable con nuestro equipo y encontraremos la solución adecuada para su empresa."
+  }
+}

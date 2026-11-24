@@ -1,0 +1,104 @@
+{
+  "hero": {
+    "badge": "À propos d'InforAntunes",
+    "title": "La technologie avec l'expérience.",
+    "subtitle": "Des personnes avec une vision.",
+    "desc": "Plus de 25 ans à accompagner les entreprises portugaises avec la technologie, les logiciels de gestion, l'automatisation et le support technique spécialisé."
+  },
+  "story": {
+    "badge": "Notre histoire",
+    "title": "Une entreprise construite pour durer.",
+    "p1": "InforAntunes est née en 1997 à Lourinhã sous la forme d’une entreprise individuelle, à une époque où les technologies d’entreprise faisaient leurs premiers pas au Portugal. En 2001, grâce à la croissance et à la consolidation de l’activité, la société InforAntunes a été constituée.",
+    "p2": "Depuis, nous avons grandi aux côtés des entreprises que nous accompagnons, en suivant l’évolution technologique et les nouvelles exigences du marché. Au fil des années, une priorité a continué à définir notre manière de travailler : offrir un service de qualité, proche et orienté vers les résultats de nos clients.",
+    "p3": "Notre modèle est simple : nous combinons des technologies de référence avec une équipe humaine proche, spécialisée et engagée pour la réussite de chaque client. Au-delà de la fourniture de solutions technologiques, nous cherchons à comprendre chaque activité, identifier ses besoins et bâtir des partenariats durables."
+  },
+  "values": {
+    "badge": "Valeurs",
+    "title": "Ce qui nous définit.",
+    "items": [
+      {
+        "icon": "◆",
+        "title": "Proximité",
+        "desc": "Nous restons proches de nos clients — concrètement et stratégiquement."
+      },
+      {
+        "icon": "◈",
+        "title": "Compétence",
+        "desc": "Plus de 25 ans d'expérience en technologie d'entreprise et support technique."
+      },
+      {
+        "icon": "◉",
+        "title": "Confiance",
+        "desc": "Une relation construite au fil des années, fondée sur la transparence et le respect des engagements."
+      },
+      {
+        "icon": "◎",
+        "title": "Innovation",
+        "desc": "Nous introduisons de nouvelles technologies — comme l'automatisation et la robotique — lorsqu'elles ont du sens pour nos clients."
+      }
+    ]
+  },
+  "timeline": {
+    "badge": "Parcours",
+    "title": "Plus de 25 ans d'évolution.",
+    "items": [
+      {
+        "year": "1997",
+        "title": "Fondation",
+        "desc": "Fondée en 1997 à Lourinhã sous le nom de « CPM Informática », avec une activité centrée sur les logiciels de restauration et le support informatique."
+      },
+      {
+        "year": "2005",
+        "title": "Expansion des solutions",
+        "desc": "Élargissement du portefeuille avec de nouveaux partenariats logiciels, incluant des solutions pour la restauration et l'hôtellerie."
+      },
+      {
+        "year": "2012",
+        "title": "PME Líder",
+        "desc": "Reconnue pour la première fois comme PME Líder par l'IAPMEI, reflétant la solidité financière et la capacité de croissance."
+      },
+      {
+        "year": "2018",
+        "title": "Paiements automatisés",
+        "desc": "Intégration de systèmes de gestion automatique des espèces avec la solution Cashlogy."
+      },
+      {
+        "year": "2022",
+        "title": "Robotique de service",
+        "desc": "Partenariat avec Pudu Robotics pour la commercialisation de robots de service au Portugal."
+      },
+      {
+        "year": "2024",
+        "title": "PME Excelência",
+        "desc": "Obtention du statut PME Excelência, reconnaissant la performance de l'entreprise sur plus de deux décennies."
+      }
+    ]
+  },
+  "recognition": {
+    "title": "Reconnaissance institutionnelle.",
+    "subtitle": "Des distinctions qui témoignent de notre engagement envers l'excellence.",
+    "items": [
+      {
+        "title": "PME Líder",
+        "sub": "IAPMEI",
+        "desc": "Reconnaissance attribuée par l'IAPMEI aux entreprises ayant des performances supérieures en termes de solidité et de croissance."
+      },
+      {
+        "title": "PME Excelência",
+        "sub": "IAPMEI",
+        "desc": "Distinction accordée aux entreprises affichant les plus hauts niveaux de performance économique et financière."
+      },
+      {
+        "title": "Paiement Ponctuel",
+        "sub": "Infoline",
+        "desc": "Certification attestant le respect ponctuel des obligations commerciales et financières de l'entreprise."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Travaillons ensemble ?",
+    "desc": "Parlez à notre équipe et découvrez comment nous pouvons soutenir la croissance de votre entreprise.",
+    "primary": "Nous contacter →",
+    "secondary": "Voir les solutions"
+  }
+}

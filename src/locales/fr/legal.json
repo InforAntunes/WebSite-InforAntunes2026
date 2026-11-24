@@ -1,0 +1,32 @@
+{
+  "privacy": {
+    "title": "Politique de Confidentialité",
+    "breadcrumb": "Confidentialité",
+    "p1": "InforAntunes, Lda. respecte la vie privée de ses utilisateurs et s'engage à protéger les données personnelles collectées via ce site web, conformément au Règlement Général sur la Protection des Données (RGPD).",
+    "p2": "Les données personnelles collectées via le formulaire de contact sont utilisées exclusivement pour répondre aux demandes soumises et ne sont pas partagées avec des tiers sans le consentement de l'utilisateur.",
+    "p3": "Pour exercer vos droits d'accès, de rectification, de suppression ou de portabilité des données, vous pouvez nous contacter à l'adresse geral@inforantunes.com."
+  },
+  "terms": {
+    "title": "Conditions Générales d'Utilisation",
+    "breadcrumb": "Conditions",
+    "p1": "L'accès et l'utilisation du site web d'InforAntunes sont soumis aux présentes Conditions Générales d'Utilisation. En utilisant ce site, l'utilisateur accepte les conditions décrites ci-après.",
+    "p2": "InforAntunes se réserve le droit de modifier le contenu de ce site sans préavis. Les informations fournies ont un caractère purement informatif et ne constituent pas une offre contractuelle."
+  },
+  "cookies": {
+    "title": "Politique de Cookies",
+    "breadcrumb": "Cookies",
+    "p1": "Le site web d'InforAntunes utilise des cookies pour améliorer l'expérience de navigation. Les cookies sont de petits fichiers texte stockés dans votre navigateur qui permettent de reconnaître les visites répétées et de personnaliser le contenu.",
+    "p2": "Vous pouvez configurer votre navigateur pour refuser les cookies, mais cela peut affecter le fonctionnement de certaines sections du site web."
+  },
+  "consumidor": {
+    "title": "Informations aux Consommateurs",
+    "breadcrumb": "Consommateur",
+    "link": "True",
+    "link1": "http://www.arbitragemdeconsumo.org/",
+    "link2": "http://www.consumidor.pt/",
+    "p1": "En cas de litige de consommation, le consommateur peut recourir à l’organisme suivant de règlement extrajudiciaire des litiges de consommation :",
+    "p2": "CNIACC - Centre national d’information et d’arbitrage des litiges de consommation",
+    "p3": "Tél. : 213 847 484 - E-mail : cniacc@fd.unl.pt - Site : <linkExt>http://www.arbitragemdeconsumo.org/</linkExt>",
+    "p4": "Pour les mises à jour et plus d’informations, consultez le Portail du Consommateur sur <linkExt>http://www.consumidor.pt/</linkExt>"
+  }
+}

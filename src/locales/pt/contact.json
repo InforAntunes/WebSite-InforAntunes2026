@@ -1,0 +1,39 @@
+{
+  "hero": {
+    "badge": "Fale connosco",
+    "title": "Vamos falar sobre",
+    "subtitle": "o seu próximo projeto.",
+    "desc": "A equipa InforAntunes está disponível para o ajudar a encontrar a solução tecnológica certa para a sua empresa."
+  },
+  "info": {
+    "title": "Informações de contacto",
+    "address": "Morada",
+    "phone": "Telefone",
+    "email": "Email"
+  },
+  "form": {
+    "title": "Envie-nos uma mensagem",
+    "subtitle": "Respondemos habitualmente em menos de 24 horas.",
+    "name": "Nome *",
+    "namePlaceholder": "O seu nome",
+    "company": "Empresa",
+    "companyPlaceholder": "Nome da empresa",
+    "email": "Email *",
+    "emailPlaceholder": "email@empresa.pt",
+    "phone": "Telefone",
+    "phonePlaceholder": "+351 000 000 000",
+    "message": "Mensagem *",
+    "messagePlaceholder": "Descreva como podemos ajudar a sua empresa...",
+    "submit": "Enviar mensagem →",
+    "sending": "A enviar...",
+    "errors": {
+      "nameRequired": "Nome é obrigatório",
+      "emailInvalid": "Email inválido",
+      "messageRequired": "Mensagem é obrigatória"
+    },
+    "success": {
+      "title": "Mensagem enviada!",
+      "desc": "Recebemos a sua mensagem e entraremos em contacto brevemente."
+    }
+  }
+}

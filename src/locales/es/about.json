@@ -1,0 +1,104 @@
+{
+  "hero": {
+    "badge": "Sobre InforAntunes",
+    "title": "Tecnología con experiencia.",
+    "subtitle": "Personas con propósito.",
+    "desc": "Más de 25 años apoyando a empresas portuguesas con tecnología, software de gestión, automatización y soporte técnico especializado."
+  },
+  "story": {
+    "badge": "Nuestra historia",
+    "title": "Una empresa construida para durar.",
+    "p1": "InforAntunes nació en 1997 en Lourinhã y comenzó como empresario individual, cuando la tecnología empresarial daba sus primeros pasos en Portugal. En 2001, fruto del crecimiento de la actividad y la consolidación del negocio, se constituyó la empresa InforAntunes.",
+    "p2": "Desde entonces, hemos crecido junto a las empresas que apoyamos, acompañando la evolución tecnológica y las nuevas exigencias del mercado. Durante estos años, hemos mantenido una prioridad que sigue definiendo nuestra forma de trabajar: prestar un servicio de calidad, cercano y orientado a los resultados de nuestros clientes.",
+    "p3": "Nuestro modelo es sencillo: combinamos tecnología de referencia con un equipo humano cercano, especializado y comprometido con el éxito de cada cliente. Más que suministrar soluciones tecnológicas, buscamos comprender cada negocio, identificar sus necesidades y construir relaciones de colaboración duraderas."
+  },
+  "values": {
+    "badge": "Valores",
+    "title": "Lo que nos define.",
+    "items": [
+      {
+        "icon": "◆",
+        "title": "Proximidad",
+        "desc": "Estamos cerca de nuestros clientes — literal y estratégicamente."
+      },
+      {
+        "icon": "◈",
+        "title": "Competencia",
+        "desc": "Más de 25 años de experiencia en tecnología empresarial y soporte técnico."
+      },
+      {
+        "icon": "◉",
+        "title": "Confianza",
+        "desc": "Una relación construida a lo largo de años basada en la transparencia y el cumplimiento."
+      },
+      {
+        "icon": "◎",
+        "title": "Innovación",
+        "desc": "Introducimos nuevas tecnologías cuando tienen sentido para nuestros clientes."
+      }
+    ]
+  },
+  "timeline": {
+    "badge": "Trayectoria",
+    "title": "Más de 25 años de evolución.",
+    "items": [
+      {
+        "year": "1997",
+        "title": "Fundación",
+        "desc": "Nace en 1997 en Lourinhã como “CPM Informática”, centrada en software para restauración y soporte informático."
+      },
+      {
+        "year": "2005",
+        "title": "Expansión de soluciones",
+        "desc": "Ampliación del portfolio con nuevas asociaciones de software para restauración y hostelería."
+      },
+      {
+        "year": "2012",
+        "title": "PME Líder",
+        "desc": "Reconocida por primera vez como PME Líder por el IAPMEI."
+      },
+      {
+        "year": "2018",
+        "title": "Pagos automatizados",
+        "desc": "Integración de sistemas de gestión automática de efectivo con la solución Cashlogy."
+      },
+      {
+        "year": "2022",
+        "title": "Robótica de servicio",
+        "desc": "Asociación con Pudu Robotics para la comercialización de robots de servicio en Portugal."
+      },
+      {
+        "year": "2024",
+        "title": "PME Excelência",
+        "desc": "Obtención del estatuto PME Excelência, reconociendo el rendimiento de la empresa."
+      }
+    ]
+  },
+  "recognition": {
+    "title": "Reconocimiento institucional.",
+    "subtitle": "Distinciones que reflejan nuestro compromiso con la excelencia.",
+    "items": [
+      {
+        "title": "PME Líder",
+        "sub": "IAPMEI",
+        "desc": "Reconocimiento otorgado por el IAPMEI a empresas con rendimiento superior."
+      },
+      {
+        "title": "PME Excelência",
+        "sub": "IAPMEI",
+        "desc": "Distinción otorgada a empresas con los más altos niveles de rendimiento económico y financiero."
+      },
+      {
+        "title": "Pago Puntual",
+        "sub": "Infoline",
+        "desc": "Certificación que acredita el cumplimiento puntual de las obligaciones comerciales y financieras."
+      }
+    ]
+  },
+  "cta": {
+    "title": "¿Trabajamos juntos?",
+    "desc": "Hable con nuestro equipo y descubra cómo podemos apoyar el crecimiento de su empresa.",
+    "primary": "Contáctenos →",
+    "secondary": "Ver soluciones"
+  }
+}

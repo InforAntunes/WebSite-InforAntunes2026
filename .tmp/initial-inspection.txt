@@ -1,0 +1,1408 @@
+status: exited
+stdout file: /figaro/tool-output/bash/1/stdout (77414 bytes)
+stderr file: /figaro/tool-output/bash/1/stderr (0 bytes)
+exit code: 0
+
+OUTPUT TRUNCATED: the head-and-tail previews below are INCOMPLETE; the middle is omitted. Complete output is saved at the stdout/stderr paths above. If your task depends on omitted content, you MUST use `read` on the relevant file and follow its continuation offsets through the required content before generating or changing code. Do not guess or infer omitted content from the preview. Reading with bash again can truncate again.
+
+--- stdout (head + tail; full output in file above) ---
+# figma-make-app
+
+React + Vite + Tailwind CSS project running inside Figma Make.
+
+## Development Server
+
+A Vite development server is **already running** on `$PORT` (default 8443). You don't need to start it manually.
+
+- Preview URL: The user can access the running app through the preview panel
+- Hot reload: Changes to source files are reflected immediately
+
+## Project Structure
+
+This is the canonical project structure. Start with task-relevant files below. Only follow imports or inspect other files when required, when a documented path is missing, or when the repository contradicts this guide.
+
+- `src/main.tsx` - React entrypoint; imports `src/index.css` and mounts `src/App.tsx` into the `#root` element
+- `src/App.tsx` - Primary application component and the usual starting point for UI work
+- `src/index.css` - Global CSS entrypoint and Tailwind CSS v4 import
+- `index.html` - Vite HTML shell containing the `#root` element and loading `src/main.tsx`
+- `package.json` - Project dependencies and the Vite build, development, preview, and formatting scripts
+- `vite.config.ts` - Vite configuration with React, Tailwind CSS v4, and Figma Make plugins plus the `@` alias for `src`
+- `.mise.toml` - Toolchain versions for Node.js and pnpm
+
+## Dependencies
+
+- Runtime: React 19 and React DOM 19
+- Styling: Tailwind CSS v4 with the `@tailwindcss/vite` plugin
+- Build tooling: Vite 8, TypeScript 5.7, and `@vitejs/plugin-react`
+- Formatting: oxfmt
+
+## Styling
+
+This project uses **Tailwind CSS v4** through the `@tailwindcss/vite` plugin configured in `vite.config.ts`. `src/index.css` imports Tailwind with `@import 'tailwindcss';`. Use Tailwind utility classes directly in JSX and put global CSS or Tailwind v4 theme customization in `src/index.css`. This scaffold does not need a Tailwind config file or PostCSS config.
+
+`src/main.tsx` imports `src/index.css`, so global font wiring belongs in `src/index.css`. Keep CSS `@import` statements first, then add any `@font-face` rules and font-family defaults there.
+
+## Code quality
+
+- Use double quotes for strings containing apostrophes (`"We're here to help"`), or escape them in single-quoted strings. An unescaped apostrophe in a single-quoted string breaks the build.
+- Ensure JSX tags are closed and braces are balanced.
+- Export components as default exports.
+export type LeadFormType =
+  | "robotics"
+  | "payments"
+  | "managementSoftware"
+  | "serviceQuote"
+  | "timeTracking"
+
+export type LeadSource =
+  | "robotics"
+  | "payments"
+  | "cashlogy"
+  | "compact"
+  | "xd"
+  | "winrest"
+  | "zonesoft"
+  | "services"
+  | "sistema-ponto"
+
+export type LeadFieldName =
+  | "company"
+  | "contact"
+  | "businessType"
+  | "nif"
+  | "dailyRevenue"
+  | "software"
+  | "paymentPoints"
+  | "needs"
+  | "services"
+  | "description"
+  | "equipmentCount"
+  | "employeeCount"
+  | "phone"
+  | "email"
+
+export type LeadFieldConfig = {
+  name: LeadFieldName
+  type:
+    | "text"
+    | "email"
+    | "tel"
+    | "textarea"
+    | "select"
+    | "multiselect"
+  labelKey: string
+  placeholderKey?: string
+  optionsKey?: string
+  required: boolean
+  autoComplete?: string
+  inputMode?: "numeric" | "tel"
+  fullWidth?: boolean
+}
+
+export type LeadFormConfig = {
+  type: LeadFormType
+  leadOrigin: string
+  translationRoot: string
+  titleKey: string
+  descriptionKey: string
+  solutionLabelKey: string
+  submitKey: string
+  successMessageKey: string
+  fields: LeadFieldConfig[]
+}
+
+const identityFields: LeadFieldConfig[] = [
+  {
+    name: "company",
+    type: "text",
+    labelKey: "common.fields.company.label",
+    placeholderKey: "common.fields.company.placeholder",
+    required: true,
+    autoComplete: "organization",
+  },
+  {
+    name: "contact",
+    type: "text",
+    labelKey: "common.fields.contact.label",
+    placeholderKey: "common.fields.contact.placeholder",
+    required: true,
+    autoComplete: "name",
+  },
+]
+
+const contactFields: LeadFieldConfig[] = [
+  {
+    name: "phone",
+    type: "tel",
+    labelKey: "common.fields.phone.label",
+    placeholderKey: "common.fields.phone.placeholder",
+    required: true,
+    autoComplete: "tel",
+    inputMode: "tel",
+  },
+  {
+    name: "email",
+    type: "email",
+    labelKey: "common.fields.email.label",
+    placeholderKey: "common.fields.email.placeholder",
+    required: true,
+    autoComplete: "email",
+  },
+]
+
+export const leadFormConfigs: Record<LeadFormType, LeadFormConfig> = {
+  robotics: {
+    type: "robotics",
+    leadOrigin: "service-robotics",
+    translationRoot: "robotics",
+    titleKey: "robotics.title",
+    descriptionKey: "robotics.description",
+    solutionLabelKey: "robotics.solutionLabel",
+    submitKey: "robotics.submit",
+    successMessageKey: "common.success.message",
+    fields: [
+      ...identityFields,
+      {
+        name: "businessType",
+        type: "select",
+        labelKey: "common.fields.businessType.label",
+        optionsKey: "robotics.businessOptions",
+        required: true,
+      },
+      {
+        name: "nif",
+        type: "text",
+        labelKey: "common.fields.nif.label",
+        placeholderKey: "common.fields.nif.placeholder",
+        required: false,
+        inputMode: "numeric",
+      },
+      {
+        name: "dailyRevenue",
+        type: "select",
+        labelKey: "common.fields.dailyRevenue.label",
+        optionsKey: "common.revenueOptions",
+        required: true,
+      },
+      {
+        name: "software",
+        type: "text",
+        labelKey: "common.fields.software.label",
+        placeholderKey: "common.fields.software.placeholder",
+        required: true,
+      },
+      ...contactFields,
+    ],
+  },
+  payments: {
+    type: "payments",
+    leadOrigin: "automated-payments",
+    translationRoot: "payments",
+    titleKey: "payments.title",
+    descriptionKey: "payments.description",
+    solutionLabelKey: "payments.solutionLabel",
+    submitKey: "payments.submit",
+    successMessageKey: "common.success.message",
+    fields: [
+      ...identityFields,
+      {
+        name: "businessType",
+        type: "select",
+        labelKey: "common.fields.businessType.label",
+        optionsKey: "payments.businessOptions",
+        required: true,
+      },
+      {
+        name: "nif",
+        type: "text",
+        labelKey: "common.fields.nif.label",
+        placeholderKey: "common.fields.nif.placeholder",
+        required: false,
+        inputMode: "numeric",
+      },
+      {
+        name: "paymentPoints",
+        type: "select",
+        labelKey: "payments.paymentPoints.label",
+        optionsKey: "payments.paymentPoints.options",
+        required: true,
+      },
+      {
+        name: "software",
+        type: "text",
+        labelKey: "common.fields.softwarePos.label",
+        placeholderKey: "common.fields.softwarePos.placeholder",
+        required: true,
+      },
+      {
+        name: "dailyRevenue",
+        type: "select",
+        labelKey: "common.fields.dailyRevenue.label",
+        optionsKey: "common.revenueOptions",
+        required: true,
+      },
+      ...contactFields,
+    ],
+  },
+  managementSoftware: {
+    type: "managementSoftware",
+    leadOrigin: "management-software",
+    translationRoot: "managementSoftware",
+    titleKey: "managementSoftware.title",
+    descriptionKey: "managementSoftware.description",
+    solutionLabelKey: "managementSoftware.solutionLabel",
+    submitKey: "managementSoftware.submit",
+    successMessageKey: "common.success.message",
+    fields: [
+      ...identityFields,
+      {
+        name: "businessType",
+        type: "select",
+        labelKey: "common.fields.businessType.label",
+        optionsKey: "managementSoftware.businessOptions",
+        required: true,
+      },
+      {
+        name: "nif",
+        type: "text",
+        labelKey: "common.fields.nif.label",
+        placeholderKey: "common.fields.nif.placeholder",
+        required: false,
+        inputMode: "numeric",
+      },
+      {
+        name: "paymentPoints",
+        type: "select",
+        labelKey: "managementSoftware.salesPoints.label",
+        optionsKey: "managementSoftware.salesPoints.options",
+        required: true,
+      },
+      {
+        name: "software",
+        type: "text",
+        labelKey: "managementSoftware.currentSoftware.label",
+        placeholderKey: "managementSoftware.currentSoftware.placeholder",
+        required: false,
+      },
+      {
+        name: "needs",
+        type: "multiselect",
+        labelKey: "managementSoftware.needs.label",
+        optionsKey: "managementSoftware.needs.options",
+        required: true,
+      },
+      ...contactFields,
+    ],
+  },
+  serviceQuote: {
+    type: "serviceQuote",
+    leadOrigin: "services",
+    translationRoot: "serviceQuote",
+    titleKey: "serviceQuote.title",
+    descriptionKey: "serviceQuote.description",
+    solutionLabelKey: "serviceQuote.solutionLabel",
+    submitKey: "serviceQuote.submit",
+    successMessageKey: "serviceQuote.successMessage",
+    fields: [
+      ...identityFields,
+      {
+        name: "businessType",
+        type: "select",
+        labelKey: "common.fields.businessType.label",
+        optionsKey: "managementSoftware.businessOptions",
+        required: true,
+      },
+      {
+        name: "services",
+        type: "multiselect",
+        labelKey: "serviceQuote.services.label",
+        optionsKey: "serviceQuote.services.options",
+        required: true,
+        fullWidth: true,
+      },
+      {
+        name: "description",
+        type: "textarea",
+        labelKey: "serviceQuote.needDescription.label",
+        placeholderKey: "serviceQuote.needDescription.placeholder",
+        required: true,
+        fullWidth: true,
+      },
+      {
+        name: "equipmentCount",
+        type: "text",
+        labelKey: "serviceQuote.equipmentCount.label",
+        placeholderKey: "serviceQuote.equipmentCount.placeholder",
+        required: false,
+        inputMode: "numeric",
+      },
+      ...contactFields,
+    ],
+  },
+  timeTracking: {
+    type: "timeTracking",
+    leadOrigin: "sistema-ponto",
+    translationRoot: "timeTracking",
+    titleKey: "timeTracking.title",
+    descriptionKey: "timeTracking.description",
+    solutionLabelKey: "timeTracking.solutionLabel",
+    submitKey: "timeTracking.submit",
+    successMessageKey: "timeTracking.successMessage",
+    fields: [
+      ...identityFields,
+      {
+        name: "employeeCount",
+        type: "select",
+        labelKey: "timeTracking.employeeCount.label",
+        optionsKey: "timeTracking.employeeCount.options",
+        required: true,
+      },
+      {
+        name: "businessType",
+        type: "select",
+        labelKey: "common.fields.businessType.label",
+        optionsKey: "managementSoftware.businessOptions",
+        required: true,
+      },
+      ...contactFields,
+    ],
+  },
+}
+import { useTranslation } from "react-i18next";
+import ProductPage from "./ProductPage";
+
+export default function XDPage() {
+  const { t } = useTranslation("solutions");
+  const { t: tc } = useTranslation("common");
+  return (
+    <ProductPage
+      product={{
+        name: "XD",
+        category: t("xd.category"),
+        tagline: t("xd.tagline"),
+        description: t("xd.description"),
+        heroImage:
+          "https://img.magnific.com/fotos-gratis/trabalhador-de-supermercado-medindo-e-vendendo-carne-para-o-cliente_342744-1074.jpg?semt=ais_hybrid&w=740&q=80",
+        accentColor: "#005FA8",
+        leadForm: "managementSoftware",
+        leadFormSource: "xd",
+        breadcrumb: [
+          { label: tc("breadcrumb.solutions"), path: "/solucoes" },
+          { label: tc("breadcrumb.software"), path: "/solucoes/softwares" },
+          { label: "XD", path: "/solucoes/softwares/xd" },
+        ],
+        featuresTitle: t("xd.featuresTitle"),
+        ctaTitle: t("xd.ctaTitle"),
+        ctaDesc: t("xd.ctaDesc"),
+        features: t("xd.features", { returnObjects: true }) as string[],
+        applications: t("xd.applications", { returnObjects: true }) as string[],
+      }}
+    />
+  );
+}
+import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import SolutionLeadModal, { type LeadFormType, type LeadSource } from '../../components/SolutionLeadModal';
+
+function useInView(threshold = 0.15) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [inView, setInView] = useState(false);
+  useEffect(() => {
+    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) setInView(true); }, { threshold });
+    if (ref.current) obs.observe(ref.current);
+    return () => obs.disconnect();
+  }, [threshold]);
+  return { ref, inView };
+}
+
+function FadeIn({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
+  const { ref, inView } = useInView();
+  return (
+    <div ref={ref} style={{ opacity: inView ? 1 : 0, transform: inView ? 'translateY(0)' : 'translateY(24px)', transition: `opacity 0.6s ease ${delay}ms, transform 0.6s ease ${delay}ms` }}>
+      {children}
+    </div>
+  );
+}
+
+export interface ProductConfig {
+  name: string;
+  category: string;
+  tagline: string;
+  description: string;
+  heroImage: string;
+  heroImageAlt?: string;
+  features: string[];
+  applications: string[];
+  accentColor: string;
+  breadcrumb: { label: string; path: string }[];
+  featuresTitle?: string;
+  sectorsTitle?: string;
+  ctaTitle?: string;
+  ctaDesc?: string;
+  platformsLabel?: string;
+  platformsTitle?: string;
+  platforms?: Array<{ title: string; description: string; items: string[] }>;
+  otherSolutionsPath?: string;
+  leadForm?: LeadFormType;
+  leadFormSource?: LeadSource;
+}
+
+export default function ProductPage({ product }: { product: ProductConfig }) {
+  const { t } = useTranslation('solutions');
+  const { t: tc } = useTranslation('common');
+
+  return (
+    <div>
+      {/* HERO */}
+      <section style={{ background: `linear-gradient(135deg, #073B63 0%, ${product.accentColor} 100%)`, padding: '160px 0 0', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}>
+          {Array.from({ length: 4 }).map((_, row) =>
+            Array.from({ length: 8 }).map((_, col) => (
+              <div key={`${row}-${col}`} style={{ position: 'absolute', top: `${10 + row * 22}%`, left: `${4 + col * 13}%`, width: '2px', height: '2px', borderRadius: '50%', background: 'rgba(255,255,255,0.1)' }} />
+            ))
+          )}
+        </div>
+
+        <div style={{ maxWidth: '1320px', margin: '0 auto', padding: '0 32px', position: 'relative' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '48px', flexWrap: 'wrap' }}>
+            <Link to="/" style={{ fontSize: '12px', color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>{tc('breadcrumb.home')}</Link>
+            {product.breadcrumb.map((bc, i) => (
+              <span key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <span style={{ color: 'rgba(255,255,255,0.3)', fontSize: '12px' }}>/</span>
+                {i < product.breadcrumb.length - 1 ? (
+                  <Link to={bc.path} style={{ fontSize: '12px', color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}>{bc.label}</Link>
+                ) : (
+                  <span style={{ fontSize: '12px', color: 'rgba(255,255,255,0.8)' }}>{bc.label}</span>
+                )}
+              </span>
+            ))}
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '64px', alignItems: 'flex-end' }}>
+            <div style={{ paddingBottom: '80px' }}>
+              <div style={{ display: 'inline-block', padding: '5px 12px', borderRadius: '6px', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.15)', fontSize: '11px', fontWeight: 700, letterSpacing: '1.5px', color: 'rgba(255,255,255,0.7)', textTransform: 'uppercase', marginBottom: '20px' }}>
+                {product.category}
+              </div>
+              <h1 style={{ fontSize: 'clamp(44px, 5vw, 72px)', fontWeight: 900, letterSpacing: '-2.5px', lineHeight: 1, color: '#FFFFFF', marginBottom: '20px' }}>
+                {product.name}
+              </h1>
+              <p style={{ fontSize: '18px', fontWeight: 600, color: 'rgba(255,255,255,0.8)', marginBottom: '12px', lineHeight: 1.4 }}>{product.tagline}</p>
+              <p style={{ fontSize: '16px', lineHeight: 1.75, color: 'rgba(255,255,255,0.6)', marginBottom: '36px', maxWidth: '440px' }}>{product.description}</p>
+              <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+                {product.leadForm && product.leadFormSource ? (
+                  <>
+                    <SolutionLeadModal type={product.leadForm} source={product.leadFormSource} style={{ padding: '12px 24px', background: '#C00000', border: 'none', color: '#FFFFFF', borderRadius: '10px', fontFamily: 'inherit', cursor: 'pointer', fontSize: '14px', fontWeight: 700, transition: 'all 0.2s' }}>
+                      {t('productPage.demoBtn')}
+                    </SolutionLeadModal>
+                    <SolutionLeadModal type={product.leadForm} source={product.leadFormSource} style={{ padding: '12px 24px', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', color: '#FFFFFF', borderRadius: '10px', fontFamily: 'inherit', cursor: 'pointer', fontSize: '14px', fontWeight: 600, transition: 'all 0.2s' }}>
+                      {t('productPage.specialistBtn')}
+                    </SolutionLeadModal>
+                  </>
+                ) : (
+                  <>
+                    <Link to="/contactos" style={{ padding: '12px 24px', background: '#C00000', color: '#FFFFFF', borderRadius: '10px', textDecoration: 'none', fontSize: '14px', fontWeight: 700, transition: 'all 0.2s' }}>
+                      {t('productPage.demoBtn')}
+                    </Link>
+                    <Link to="/contactos" style={{ padding: '12px 24px', background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.2)', color: '#FFFFFF', borderRadius: '10px', textDecoration: 'none', fontSize: '14px', fontWeight: 600, transition: 'all 0.2s' }}>
+                      {t('productPage.specialistBtn')}
+                    </Link>
+                  </>
+                )}
+              </div>
+            </div>
+
+            <div style={{ alignSelf: 'flex-end' }}>
+              <div style={{ borderRadius: '20px 20px 0 0', overflow: 'hidden', boxShadow: '0 -16px 48px rgba(0,0,0,0.2)', background: '#0A4F84' }}>
+                <img src={product.heroImage} alt={product.heroImageAlt || `${product.name} — interface`} style={{ width: '100%', height: '380px', objectFit: 'cover', display: 'block', opacity: 0.9 }} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FEATURES */}
+      <section style={{ background: '#FFFFFF', padding: '100px 0' }}>
+        <div style={{ maxWidth: '1320px', margin: '0 auto', padding: '0 32px' }}>
+          <FadeIn>
+            <div style={{ marginBottom: '64px' }}>
+              <div style={{ display: 'inline-block', padding: '5px 12px', borderRadius: '6px', background: '#EEF6FF', color: product.accentColor, fontSize: '11px', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', marginBottom: '16px' }}>
+                {t('productPage.featuresLabel')}
+              </div>
+              <h2 style={{ fontSize: 'clamp(28px, 3vw, 44px)', fontWeight: 800, letterSpacing: '-1px', lineHeight: 1.1, color: '#20252B' }}>
+                {product.featuresTitle || `${t('productPage.ctaTitle')} ${product.name}.`}
+              </h2>
+            </div>
+          </FadeIn>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px' }}>
+            {product.features.map((feat, i) => (
+              <FadeIn key={i} delay={i * 60}>
+                <div style={{ padding: '24px', borderRadius: '14px', background: '#F5F7F9', border: '1px solid #E2E8F0', transition: 'all 0.25s', display: 'flex', gap: '14px', alignItems: 'flex-start' }}
+                  onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.background = '#EEF6FF'; el.style.borderColor = product.accentColor; }}
+                  onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.background = '#F5F7F9'; el.style.borderColor = '#E2E8F0'; }}
+                >
+                  <div style={{ width: '28px', height: '28px', borderRadius: '8px', background: '#FFFFFF', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}>
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                      <path d="M2 6.5l2.5 2.5L10 3" stroke={product.accentColor} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </div>
+                  <span style={{ fontSize: '14px', color: '#20252B', lineHeight: 1.5, fontWeight: 500 }}>{feat}</span>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {product.platforms && product.platforms.length > 0 && (
+        <section style={{ background: '#F5F7F9', padding: '80px 0 100px' }}>
+          <div style={{ maxWidth: '1320px', margin: '0 auto', padding: '0 32px' }}>
+            <FadeIn>
+              <div style={{ marginBottom: '56px' }}>
+                <div style={{ display: 'inline-block', padding: '5px 12px', borderRadius: '6px', background: '#EEF6FF', color: product.accentColor, fontSize: '11px', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', marginBottom: '16px' }}>
+                  {product.platformsLabel}
+                </div>
+                <h2 style={{ fontSize: 'clamp(28px, 3vw, 44px)', fontWeight: 800, letterSpacing: '-1px', lineHeight: 1.1, color: '#20252B' }}>
+                  {product.platformsTitle}
+                </h2>
+              </div>
+            </FadeIn>
+            <div className="product-platform-grid">
+              {product.platforms.map((platform, index) => (
+                <FadeIn key={platform.title} delay={index * 80}>
+                  <div className="product-platform-card">
+                    <div className="product-platform-icon" aria-hidden="true">
+                      {index === 0 ? (
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                          <rect x="6" y="2" width="12" height="20" rx="3" stroke="currentColor" strokeWidth="1.8" />
+                          <path d="M10 18h4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+                        </svg>
+                      ) : (
+                        <svg width="23" height="23" viewBox="0 0 24 24" fill="none">
+                          <rect x="2" y="3" width="20" height="15" rx="2" stroke="currentColor" strokeWidth="1.8" />
+                          <path d="M8 22h8M12 18v4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+                        </svg>
+                      )}
+                    </div>
+                    <h3>{platform.title}</h3>
+                    <p>{platform.description}</p>
+                    <div className="product-platform-items">
+                      {platform.items.map(item => (
+                        <div key={item}>
+                          <span aria-hidden="true" />
+                          {item}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </FadeIn>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* APPLICATIONS */}
+      <section style={{ background: '#F5F7F9', padding: '80px 0 100px' }}>
+        <div style={{ maxWidth: '1320px', margin: '0 auto', padding: '0 32px' }}>
+          <FadeIn>
+            <div style={{ textAlign: 'center', marginBottom: '56px' }}>
+              <div style={{ display: 'inline-block', padding: '5px 12px', borderRadius: '6px', background: '#FFF0F0', color: '#C00000', fontSize: '11px', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', marginBottom: '16px' }}>
+                {t('productPage.sectorsLabel')}
+              </div>
+              <h2 style={{ fontSize: 'clamp(24px, 2.5vw, 36px)', fontWeight: 800, letterSpacing: '-0.8px', lineHeight: 1.15, color: '#20252B' }}>
+                {product.sectorsTitle || `${t('productPage.forWhom')} ${product.name}?`}
+              </h2>
+            </div>
+          </FadeIn>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', justifyContent: 'center' }}>
+            {product.applications.map((app, i) => (
+              <FadeIn key={i} delay={i * 40}>
+                <div style={{ padding: '10px 20px', borderRadius: '100px', background: '#FFFFFF', border: '1.5px solid #E2E8F0', fontSize: '14px', fontWeight: 600, color: '#20252B', transition: 'all 0.2s' }}
+                  onMouseEnter={e => { const el = e.currentTarget as HTMLDivElement; el.style.borderColor = product.accentColor; el.style.color = product.accentColor; el.style.background = '#EEF6FF'; }}
+                  onMouseLeave={e => { const el = e.currentTarget as HTMLDivElement; el.style.borderColor = '#E2E8F0'; el.style.color = '#20252B'; el.style.background = '#FFFFFF'; }}
+                >
+                  {app}
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FINAL CTA */}
+      <section style={{ background: '#073B63', padding: '100px 0' }}>
+        <div style={{ maxW
+
+[truncated: omitted lines 628-1220 (26286 bytes, bytes 25565-51850)]
+
+{
+                    display: "inline-block",
+                    padding: "5px 12px",
+                    borderRadius: "6px",
+                    background: "#FFF0F0",
+                    color: "#C00000",
+                    fontSize: "11px",
+                    fontWeight: 700,
+                    letterSpacing: "1.5px",
+                    textTransform: "uppercase",
+                    marginBottom: "16px",
+                  }}>
+                  {t("hub.cat02")}
+                </div>
+                <h2
+                  style={{
+                    fontSize: "clamp(28px, 3vw, 44px)",
+                    fontWeight: 800,
+                    letterSpacing: "-1px",
+                    lineHeight: 1.1,
+                    color: "#20252B",
+                    marginBottom: "16px",
+                  }}>
+                  {tc("mega.payments")}
+                </h2>
+                <p
+                  style={{
+                    fontSize: "16px",
+                    lineHeight: 1.75,
+                    color: "#66717D",
+                    marginBottom: "24px",
+                  }}>
+                  {t("hub.paymentsDesc")}
+                </p>
+                <Link
+                  to="/solucoes/pagamentos"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    fontSize: "14px",
+                    fontWeight: 700,
+                    color: "#C00000",
+                    textDecoration: "none",
+                    transition: "gap 0.2s",
+                  }}
+                  onMouseEnter={(e) =>
+                    ((e.currentTarget as HTMLAnchorElement).style.gap = "12px")
+                  }
+                  onMouseLeave={(e) =>
+                    ((e.currentTarget as HTMLAnchorElement).style.gap = "8px")
+                  }>
+                  {t("hub.viewPayments")}
+                </Link>
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* ROBOTICS */}
+      <section
+        style={{
+          background: "#073B63",
+          padding: "100px 0",
+          position: "relative",
+          overflow: "hidden",
+        }}>
+        <div style={{ position: "absolute", inset: 0, pointerEvents: "none" }}>
+          <div
+            style={{
+              position: "absolute",
+              top: "-20%",
+              right: "-10%",
+              width: "700px",
+              height: "700px",
+              border: "1px solid rgba(255,255,255,0.04)",
+              borderRadius: "50%",
+            }}
+          />
+        </div>
+        <div
+          style={{
+            maxWidth: "1320px",
+            margin: "0 auto",
+            padding: "0 32px",
+            position: "relative",
+          }}>
+          <FadeIn>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr",
+                gap: "80px",
+                alignItems: "center",
+              }}>
+              <div>
+                <div
+                  style={{
+                    display: "inline-block",
+                    padding: "5px 12px",
+                    borderRadius: "6px",
+                    background: "rgba(255,255,255,0.08)",
+                    border: "1px solid rgba(255,255,255,0.1)",
+                    color: "rgba(255,255,255,0.7)",
+                    fontSize: "11px",
+                    fontWeight: 700,
+                    letterSpacing: "1.5px",
+                    textTransform: "uppercase",
+                    marginBottom: "16px",
+                  }}>
+                  {t("hub.cat03")}
+                </div>
+                <h2
+                  style={{
+                    fontSize: "clamp(28px, 3vw, 44px)",
+                    fontWeight: 800,
+                    letterSpacing: "-1px",
+                    lineHeight: 1.1,
+                    color: "#FFFFFF",
+                    marginBottom: "16px",
+                  }}>
+                  {tc("mega.robotics")}
+                </h2>
+                <p
+                  style={{
+                    fontSize: "16px",
+                    lineHeight: 1.75,
+                    color: "rgba(255,255,255,0.65)",
+                    marginBottom: "24px",
+                  }}>
+                  {t("hub.roboticsDesc")}
+                </p>
+                <Link
+                  to="/solucoes/robotica"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    padding: "12px 24px",
+                    background: "#C00000",
+                    color: "#FFFFFF",
+                    borderRadius: "10px",
+                    textDecoration: "none",
+                    fontSize: "14px",
+                    fontWeight: 700,
+                    transition: "all 0.2s",
+                  }}
+                  onMouseEnter={(e) =>
+                    ((e.currentTarget as HTMLAnchorElement).style.background =
+                      "#A00000")
+                  }
+                  onMouseLeave={(e) =>
+                    ((e.currentTarget as HTMLAnchorElement).style.background =
+                      "#C00000")
+                  }>
+                  {t("hub.viewRobotics")}
+                </Link>
+              </div>
+              <div
+                style={{
+                  borderRadius: "20px",
+                  overflow: "hidden",
+                  boxShadow: "0 24px 64px rgba(0,0,0,0.3)",
+                }}>
+                <img
+                  src="https://images.unsplash.com/photo-1534723328310-e82dad3ee43f?w=700&h=500&fit=crop&auto=format"
+                  alt="Pudu Robotics - robô de serviço"
+                  style={{
+                    width: "100%",
+                    height: "420px",
+                    objectFit: "cover",
+                    display: "block",
+                  }}
+                />
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section style={{ background: "#FFFFFF", padding: "100px 0" }}>
+        <div
+          style={{
+            maxWidth: "1320px",
+            margin: "0 auto",
+            padding: "0 32px",
+            textAlign: "center",
+          }}>
+          <FadeIn>
+            <h2
+              style={{
+                fontSize: "clamp(28px, 3vw, 44px)",
+                fontWeight: 800,
+                letterSpacing: "-1px",
+                color: "#20252B",
+                marginBottom: "16px",
+              }}>
+              {t("hub.noSolution")}
+            </h2>
+            <p
+              style={{
+                fontSize: "16px",
+                color: "#66717D",
+                marginBottom: "36px",
+              }}>
+              {t("hub.noSolutionDesc")}
+            </p>
+            <Link
+              to="/contactos"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "8px",
+                padding: "14px 32px",
+                background: "#C00000",
+                color: "#FFFFFF",
+                borderRadius: "10px",
+                textDecoration: "none",
+                fontSize: "15px",
+                fontWeight: 700,
+                transition: "all 0.2s",
+              }}
+              onMouseEnter={(e) =>
+                ((e.currentTarget as HTMLAnchorElement).style.background =
+                  "#A00000")
+              }
+              onMouseLeave={(e) =>
+                ((e.currentTarget as HTMLAnchorElement).style.background =
+                  "#C00000")
+              }>
+              {tc("cta.talkSpecialist")}
+            </Link>
+          </FadeIn>
+        </div>
+      </section>
+    </div>
+  );
+}
+import { useState, useEffect, useRef } from "react"
+import { Link, useLocation } from "react-router-dom"
+import { useTranslation } from "react-i18next"
+import { LANGUAGES, setLanguage } from "../i18n"
+import icon from "../../src/public/photos/icon.png"
+
+export default function Header() {
+  const { t, i18n } = useTranslation("common")
+  const [scrolled, setScrolled] = useState(false)
+  const [megaOpen, setMegaOpen] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false)
+  const [mobileSolOpen, setMobileSolOpen] = useState(false)
+  const [langOpen, setLangOpen] = useState(false)
+  const location = useLocation()
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const langRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40)
+    window.addEventListener("scroll", onScroll, { passive: true })
+    return () => window.removeEventListener("scroll", onScroll)
+  }, [])
+
+  useEffect(() => {
+    setMobileOpen(false)
+    setMegaOpen(false)
+    setLangOpen(false)
+  }, [location.pathname])
+
+  // Close lang dropdown on outside click
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      if (langRef.current && !langRef.current.contains(e.target as Node))
+        setLangOpen(false)
+    }
+    document.addEventListener("mousedown", handler)
+    return () => document.removeEventListener("mousedown", handler)
+  }, [])
+
+  const handleMegaEnter = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current)
+    setMegaOpen(true)
+  }
+  const handleMegaLeave = () => {
+    timeoutRef.current = setTimeout(() => setMegaOpen(false), 120)
+  }
+
+  const currentLang =
+    LANGUAGES.find((l) => l.code === i18n.language) || LANGUAGES[0]
+  const isScrolledOrMobile = scrolled
+
+  const textColor = isScrolledOrMobile ? "#20252B" : "#FFFFFF"
+  const titleColor = isScrolledOrMobile ? "#005FA8" : "#FFFFFF"
+  const activeTextColor = isScrolledOrMobile ? "#005FA8" : "#FFFFFF"
+
+  const solutions = {
+    software: {
+      label: t("mega.software"),
+      items: [
+        {
+          name: "WinRest",
+          desc: t("mega.winrest_desc"),
+          path: "/solucoes/softwares/winrest",
+        },
+        { name: "XD", desc: t("mega.xd_desc"), path: "/solucoes/softwares/xd" },
+        {
+          name: "Zonesoft",
+          desc: t("mega.zonesoft_desc"),
+          path: "/solucoes/softwares/zonesoft",
+        },
+      ],
+    },
+    pagamentos: {
+      label: t("mega.payments"),
+      items: [
+        {
+          name: "Cashlogy",
+          desc: t("mega.cashlogy_desc"),
+          path: "/solucoes/pagamentos/cashlogy",
+        } /* 
+        {
+          name: "Caixa Automática Compact",
+          desc: t("mega.compact_desc"),
+          path: "/solucoes/pagamentos/compact",
+        }, */,
+        /* {
+          name: "Instalação e Logística",
+          desc: t("mega.entrega_desc"),
+          path: "/solucoes/pagamentos/entrega",
+        }, */
+      ],
+    },
+    robotica: {
+      label: t("mega.robotics"),
+      items: [
+        {
+          name: "Pudu Robotics",
+          desc: t("mega.pudu_desc"),
+          path: "/solucoes/robotica",
+        },
+      ],
+    },
+
+    cibersegurança: {
+      label: t("mega.ciberseguranca"),
+      items: [
+        {
+          name: "Pudu Robotics",
+          desc: t("mega.pudu_desc"),
+          path: "/solucoes/robotica",
+        },
+      ],
+    },
+    gestao: {
+      label: t("mega.gestao"),
+      items: [
+        {
+          name: "Sistema Ponto",
+          desc: t("mega.sistema_ponto_desc"),
+          path: "/solucoes/sistema-ponto",
+        },
+      ],
+    },
+  }
+
+  return (
+    <>
+      <header
+        className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+        style={{
+          background: scrolled ? "rgba(255,255,255,0.96)" : "transparent",
+          backdropFilter: scrolled ? "blur(12px)" : "none",
+          borderBottom: scrolled
+            ? "1px solid #E2E8F0"
+            : "1px solid transparent",
+          boxShadow: scrolled ? "0 1px 24px rgba(0,0,0,0.06)" : "none",
+        }}
+      >
+        <div
+          style={{ maxWidth: "1320px", margin: "0 auto", padding: "0 32px" }}
+        >
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              height: "72px",
+            }}
+          >
+            {/* Logo */}
+            <Link
+              to="/"
+              aria-label="InforAntunes — Home"
+              style={{
+                display: "flex",
+              }}
+            >
+              {t("nav.solutions")}
+            </div>
+            <div
+              style={{ display: "flex", flexDirection: "column", gap: "12px" }}
+            >
+              {[
+                {
+                  label: t("breadcrumb.software"),
+                  path: "/solucoes/softwares",
+                },
+                { label: "Cashlogy", path: "/solucoes/pagamentos/cashlogy" },
+                { label: "Pudu Robotics", path: "/solucoes/robotica" },
+                { label: "Sistema Ponto", path: "/solucoes/sistema-ponto" },
+              ].map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  style={{
+                    fontSize: "14px",
+                    color: "rgba(255,255,255,0.7)",
+                    textDecoration: "none",
+                    transition: "color 0.2s",
+                  }}
+                  onMouseEnter={(e) =>
+                    ((e.currentTarget as HTMLAnchorElement).style.color =
+                      "#FFFFFF")
+                  }
+                  onMouseLeave={(e) =>
+                    ((e.currentTarget as HTMLAnchorElement).style.color =
+{
+  "hero": {
+    "badge": "O que fazemos",
+    "title": "Tecnologia aplicada",
+    "subtitle": "ao seu negócio.",
+    "desc": "Desde a implementação de software até à robótica, cobrimos todas as necessidades tecnológicas da sua empresa com uma equipa especializada e comprometida."
+  },
+  "items": [
+    {
+      "num": "01",
+      "title": "Software de Gestão",
+      "desc": "Implementação e suporte de soluções POS para comércio, restauração, hotelaria e indústria. Trabalhamos com WinRest, XD e Zonesoft.",
+      "items": [
+        "Implementação e configuração",
+        "Formação de utilizadores",
+        "Migração de dados",
+        "Suporte pós-implementação"
+      ]
+    },
+    {
+      "num": "02",
+      "title": "Suporte Informático",
+      "desc": "Assistência técnica especializada presencial e remota para manutenção de equipamentos, resolução de problemas e prevenção de falhas.",
+      "items": [
+        "Suporte remoto e presencial",
+        "Manutenção preventiva",
+        "Diagnóstico e reparação",
+        "Gestão de incidentes"
+      ]
+    },
+    {
+      "num": "03",
+      "title": "Desenvolvimento à Medida",
+      "desc": "Desenvolvimento de soluções personalizadas e integrações específicas para as necessidades particulares de cada empresa.",
+      "items": [
+        "Análise de requisitos",
+        "Desenvolvimento personalizado",
+        "Integração de sistemas",
+        "Testes e validação"
+      ]
+    },
+    {
+      "num": "04",
+      "title": "Pagamentos Automatizados",
+      "desc": "Venda, instalação e suporte de sistemas automáticos de gestão de dinheiro em caixa, como o Cashlogy.",
+      "items": [
+        "Instalação e configuração",
+        "Integração com POS existente",
+        "Formação operacional",
+        "Manutenção e assistência"
+      ]
+    },
+    {
+      "num": "05",
+      "title": "Robótica de Serviço",
+      "desc": "Venda, instalação e suporte de robôs de serviço Pudu Robotics para restauração, hotelaria e espaços comerciais.",
+      "items": [
+        "Consultoria e seleção do modelo",
+        "Instalação e configuração",
+        "Formação das equipas",
+        "Suporte técnico contínuo"
+      ]
+    },
+    {
+      "num": "06",
+      "title": "Hardware e Redes",
+      "desc": "Fornecimento, instalação e configuração de equipamentos informáticos, redes estruturadas e infraestrutura de conectividade.",
+      "items": [
+        "Fornecimento de equipamentos",
+        "Instalação de redes",
+        "Configuração de servidores",
+        "Cablagem estruturada"
+      ]
+    },
+      {
+    "num": "07",
+    "title": "Cibersegurança e Infraestrutura",
+    "desc": "Implementação e gestão de soluções de cibersegurança e infraestrutura informática para proteger os dados, sistemas e operações das empresas, incluindo preparação para os requisitos da diretiva NIS2.",
+    "items": [
+      "Consultoria e preparação para a NIS2",
+      "Backup e Disaster Recovery",
+      "Servidores físicos e virtuais (VM)",
+      "Proteção de endpoints (EDR)",
+      "Deteção e resposta alargada a ameaças (XDR)",
+      "Monitorização e resposta gerida (MDR)"
+      ]
+    },
+    {
+      "num": "08",
+      "slug": "sistema-ponto",
+      "category": "GESTÃO DE ASSIDUIDADE",
+      "title": "Sistema Ponto",
+      "desc": "Gestão de horários, presenças, férias e equipas em Web e Mobile.",
+      "items": ["Web + Mobile", "Geolocalização", "Dashboard de Assiduidade"]
+    }
+  ],
+  "systemPoint": {
+    "learnMore": "Saber mais"
+  },
+  "infra": {
+    "badge": "Infraestrutura",
+    "title": "Hardware, redes e infraestrutura informática.",
+    "desc": "Fornecemos, instalamos e configuramos toda a infraestrutura informática necessária para o bom funcionamento do seu negócio — desde servidores e redes a equipamentos de ponto de venda.",
+    "cta": "Pedir orçamento →"
+  },
+  "cta": {
+    "title": "Precisa de um serviço específico?",
+    "desc": "Fale com a nossa equipa e encontramos a solução certa para a sua empresa."
+  }
+}
+{
+  "common": {
+    "close": "Fechar formulário",
+    "selectPlaceholder": "Selecione uma opção",
+    "fields": {
+      "company": {
+        "label": "Nome da empresa",
+        "placeholder": "Nome da sua empresa"
+      },
+      "contact": {
+        "label": "Nome do responsável",
+        "placeholder": "Nome e apelido"
+      },
+      "businessType": {
+        "label": "Tipo de negócio"
+      },
+      "nif": {
+        "label": "NIF",
+        "placeholder": "Opcional"
+      },
+      "dailyRevenue": {
+        "label": "Faturação média diária"
+      },
+      "software": {
+        "label": "Software de gestão utilizado",
+        "placeholder": "Ex.: WinRest, Zone Soft, XD ou outro"
+      },
+      "softwarePos": {
+        "label": "Software de gestão / POS utilizado",
+        "placeholder": "Indique o software atual"
+      },
+      "phone": {
+        "label": "Telefone",
+        "placeholder": "+351 000 000 000"
+      },
+      "email": {
+        "label": "Email profissional",
+        "placeholder": "nome@empresa.pt"
+      }
+    },
+    "revenueOptions": [
+      "Até 500 €",
+      "500 € – 1.000 €",
+      "1.000 € – 3.000 €",
+      "Mais de 3.000 €",
+      "Prefiro não informar"
+    ],
+    "consentPrefix": "Autorizo o tratamento dos meus dados para resposta a este pedido, nos termos da",
+    "privacyLink": "Política de Privacidade",
+    "privacyNote": "Os seus dados serão utilizados apenas para analisar este pedido e permitir o contacto da nossa equipa comercial.",
+    "sending": "A enviar pedido...",
+    "errors": {
+      "required": "Este campo é obrigatório.",
+      "email": "Introduza um email profissional válido.",
+      "phone": "Introduza um número de telefone válido.",
+      "consent": "É necessário aceitar o tratamento de dados.",
+      "submit": "Não foi possível concluir o pedido. Tente novamente."
+    },
+    "success": {
+      "kicker": "Pedido recebido",
+      "message": "Obrigado pelo seu contacto! A nossa equipa irá analisar o seu pedido e entrará em contacto consigo brevemente.",
+      "close": "Fechar"
+    }
+  },
+  "robotics": {
+    "solutionLabel": "Robótica de Serviço",
+    "title": "Vamos encontrar a solução de robótica ideal para o seu negócio.",
+    "description": "Partilhe algumas informações sobre a sua empresa para que possamos recomendar a solução mais adequada.",
+    "businessOptions": [
+      "Restaurante",
+      "Hotel",
+      "Café / Bar",
+      "Supermercado / Comércio",
+      "Outro"
+    ],
+    "submit": "Enviar pedido"
+  },
+  "payments": {
+    "solutionLabel": "Pagamentos Automatizados",
+    "title": "Descubra como automatizar os pagamentos do seu negócio.",
+    "description": "Ajude-nos a perceber as necessidades da sua operação para apresentarmos a solução mais adequada.",
+    "businessOptions": [
+      "Restaurante",
+      "Café / Bar",
+      "Supermercado",
+      "Comércio a retalho",
+      "Outro"
+    ],
+    "paymentPoints": {
+      "label": "Número de caixas / pontos de pagamento",
+      "options": ["1", "2 a 3", "4 a 5", "Mais de 5"]
+    },
+    "submit": "Pedir contacto"
+  },
+  "managementSoftware": {
+    "solutionLabel": "Software de Gestão",
+    "title": "Encontre a solução de gestão ideal para o seu negócio.",
+    "description": "Partilhe as necessidades da sua operação para recomendarmos o software mais adequado.",
+    "businessOptions": [
+      "Restaurante",
+      "Café / Bar",
+      "Hotel",
+      "Supermercado",
+      "Comércio a retalho",
+      "Serviços",
+      "Outro"
+    ],
+    "salesPoints": {
+      "label": "Número de pontos de venda / caixas",
+      "options": ["1", "2 a 3", "4 a 5", "Mais de 5"]
+    },
+    "currentSoftware": {
+      "label": "Software atualmente utilizado",
+      "placeholder": "Opcional"
+    },
+    "needs": {
+      "label": "Principais necessidades",
+      "options": [
+        "Vendas e faturação",
+        "Stocks",
+        "Mesas e pedidos",
+        "Clientes",
+        "Funcionários",
+        "Relatórios e análise",
+        "Outro"
+      ]
+    },
+    "submit": "Pedir demonstração"
+  },
+  "serviceQuote": {
+    "solutionLabel": "PEDIDO DE ORÇAMENTO",
+    "title": "Peça um orçamento à medida do seu negócio.",
+    "description": "Partilhe connosco o que procura e a nossa equipa irá preparar uma proposta adequada às necessidades da sua empresa.",
+    "services": {
+      "label": "Serviço pretendido",
+      "options": [
+        "Software de Gestão",
+        "Suporte Informático",
+        "Desenvolvimento à Medida",
+        "Pagamentos Automatizados",
+        "Robótica de Serviço",
+        "Hardware e Redes",
+        "Outro"
+      ]
+    },
+    "needDescription": {
+      "label": "Descrição da necessidade",
+      "placeholder": "Descreva o serviço, desafio ou objetivo da sua empresa."
+    },
+    "equipmentCount": {
+      "label": "Número aproximado de postos / equipamentos",
+      "placeholder": "Opcional"
+    },
+    "submit": "Pedir orçamento",
+    "successMessage": "Obrigado pelo seu pedido de orçamento. A nossa equipa irá analisar as suas necessidades e entrará em contacto consigo brevemente."
+  },
+  "timeTracking": {
+    "solutionLabel": "SISTEMA PONTO",
+    "title": "Descubra uma forma mais simples de gerir a assiduidade.",
+    "description": "Partilhe algumas informações sobre a sua empresa para prepararmos uma demonstração adequada à dimensão e operação da sua equipa.",
+    "employeeCount": {
+      "label": "Número de colaboradores",
+      "options": ["1 a 10", "11 a 25", "26 a 50", "51 a 100", "Mais de 100"]
+    },
+    "submit": "Pedir demonstração",
+    "successMessage": "Obrigado pelo seu contacto! A nossa equipa irá analisar o seu pedido e entrará em contacto consigo brevemente."
+  }
+}
+{
+  "nav": {
+    "home": "Home",
+    "about": "Sobre Nós",
+    "solutions": "Soluções",
+    "services": "Serviços",
+    "contact": "Contactos",
+    "contactCta": "Contacte-nos",
+    "suportCta": "Suporte Remoto"
+  },
+  "mega": {
+    "software": "Software de Gestão",
+    "payments": "Pagamentos Automatizados",
+    "robotics": "Robótica",
+    "winrest_desc": "Gestão para restauração",
+    "xd_desc": "Plataforma de gestão XD",
+    "zonesoft_desc": "Software Restauração",
+    "sistema_ponto_desc": "Gestão de assiduidade Web e Mobile",
+    "cashlogy_desc": "Gestão automática de dinheiro",
+    "compact_desc": "Solução compacta para pagamentos",
+    "entrega_desc": "Entrega e instalação profissional",
+    "pudu_desc": "Robôs de serviço para hotelaria e restauração"
+  },
+  "footer": {
+    "tagline": "Tecnologia, software e automação para empresas que querem crescer com confiança.",
+    "company": "Empresa",
+    "solutionsCol": "Soluções",
+    "recognition": "Reconhecimento",
+    "allRights": "Todos os direitos reservados.",
+    "address": "Rua José Silva Júnior, lote 41 A/B, loja 2 2530-184 Nadrupe - Lourinhã",
+    "phone": "+351 261 416 670",
+    "email": "geral@inforantunes.com",
+    "privacy": "Privacidade",
+    "terms": "Termos",
+    "cookies": "Cookies",
+    "book": "Livro de Reclamações",
+    "consumer": "Informações ao Consumidor"
+  },
+  "cta": {
+    "contact": "Contacte-nos",
+    "explore": "Explorar soluções",
+    "learnMore": "Saber mais",
+    "requestDemo": "Pedir demonstração",
+    "talkSpecialist": "Fale com um especialista →",
+    "viewSolutions": "Ver soluções",
+    "viewAll": "Ver todos",
+    "knowMore": "Conhecer",
+    "send": "Enviar mensagem →",
+    "sending": "A enviar...",
+    "requestInstall": "Solicitar instalação →"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "about": "Sobre Nós",
+    "solutions": "Soluções",
+    "software": "Software de Gestão",
+    "payments": "Pagamentos Automatizados",
+    "robotics": "Robótica",
+    "services": "Serviços",
+    "contact": "Contactos"
+
+--- stderr ---
+
+
+Use `read` on the stdout/stderr paths above for the full output.
