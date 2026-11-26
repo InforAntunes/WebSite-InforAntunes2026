@@ -36,7 +36,7 @@ export default defineConfig(({ mode }) => {
       },
     },
     server: {
-      allowedHosts: ['implementar-formularios-e-seo-d16b3a23e22d8153.v0.build'],
+      allowedHosts: ['implementar-formularios-e-seo-d16b3a23e22d8153.v0.build', 'sb-2y8va05yh2g2.vercel.run'],
       host: process.env.FIGMA_DEV_SERVER_HOST || '0.0.0.0',
       port: parseInt(process.env.PORT || '8443'),
       strictPort: true,
