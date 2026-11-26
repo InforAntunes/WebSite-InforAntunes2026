@@ -204,7 +204,7 @@ export default function PagamentosPage() {
                   />
                   <img
                     src={productImages[i]}
-                    alt={prod.name}
+                    alt={`${prod.name} — equipamento de pagamento automático`}
                     style={{
                       width: "100%",
                       height: "200px",

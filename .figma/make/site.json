@@ -1,8 +1,6 @@
 {
-  "description": "Moderniza a presença digital da InforAntunes com um website tecnológico, fluido e premium que destaca software, automação, robótica e serviços empresariais.",
-  "robots": {
-    "index": false
-  },
+  "title": "",
+  "language": "pt-PT",
   "accessibility": {
     "addBypassLinks": false,
     "ignoreReducedMotion": false

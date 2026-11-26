@@ -7,6 +7,7 @@ import {
   useRef,
   useState,
 } from "react"
+import { deliver, SpamTrap } from './LeadDelivery'
 import { createPortal } from "react-dom"
 import { Link } from "react-router-dom"
 import { useTranslation } from "react-i18next"
@@ -85,6 +86,7 @@ export default function SolutionLeadModal({
   const closeButtonRef = useRef<HTMLButtonElement>(null)
   const triggerRef = useRef<HTMLButtonElement>(null)
   const closeTimerRef = useRef<number | null>(null)
+  const started = useRef(0)
   const submitAttemptRef = useRef(0)
 
   const translatedOptions = Object.fromEntries(
@@ -97,6 +99,7 @@ export default function SolutionLeadModal({
   ) as Partial<Record<LeadFieldName, string[]>>
 
   const open = () => {
+    started.current = Date.now()
     if (closeTimerRef.current) window.clearTimeout(closeTimerRef.current)
     submitAttemptRef.current += 1
     setForm(createEmptyForm())
@@ -187,7 +190,7 @@ export default function SolutionLeadModal({
     }
 
     const phoneDigits = String(form.phone).replace(/\D/g, "")
-    if (phoneDigits && phoneDigits.length < 9) {
+    if (form.phone && phoneDigits.length < 9) {
       nextErrors.phone = t("common.errors.phone")
     }
 
@@ -226,7 +229,8 @@ export default function SolutionLeadModal({
       if (onSubmitLead) {
         await onSubmitLead(submission)
       } else {
-        await new Promise((resolve) => window.setTimeout(resolve, 900))
+        const values = Object.fromEntries(config.fields.map(({name}) => [name, form[name]]))
+        await deliver(source, {...values, consent: form.consent}, started.current, event.currentTarget as HTMLFormElement)
       }
       if (submitAttemptRef.current === submitAttempt) {
         setStatus("success")
@@ -422,7 +426,8 @@ export default function SolutionLeadModal({
                     <p>{t(config.descriptionKey)}</p>
                   </header>
 
-                  <form onSubmit={handleSubmit} noValidate>
+                  <form onSubmit={handleSubmit} noValidate aria-busy={status === 'submitting'}>
+                    <SpamTrap />
                     <div className="solution-lead-grid">
                       {config.fields.map((field) => {
                         const id = fieldId(field.name)
