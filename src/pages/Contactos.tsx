@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react"
+import { deliver, SpamTrap } from '../components/LeadDelivery'
 import { Link } from "react-router-dom"
 import { useTranslation } from "react-i18next"
 
@@ -54,6 +55,7 @@ export default function Contactos() {
   })
   const [errors, setErrors] = useState<Partial<typeof form>>({})
   const [status, setStatus] = useState<FormState>("idle")
+  const started = useRef(Date.now())
   const [focused, setFocused] = useState<string | null>(null)
 
   const validate = () => {
@@ -74,8 +76,10 @@ export default function Contactos() {
     }
     setErrors({})
     setStatus("loading")
-    await new Promise((r) => setTimeout(r, 1500))
-    setStatus("success")
+    try {
+      await deliver('contact', form, started.current, ev.currentTarget as HTMLFormElement)
+      setStatus('success')
+    } catch { setStatus('error') }
   }
 
   const inputStyle = (field: string) => ({
@@ -359,7 +363,7 @@ export default function Contactos() {
                 }}
               >
                 {status === "success" ? (
-                  <div style={{ textAlign: "center", padding: "40px 0" }}>
+                  <div role="status" style={{ textAlign: "center", padding: "40px 0" }}>
                     <div
                       style={{
                         width: "64px",
@@ -388,7 +392,7 @@ export default function Contactos() {
                         />
                       </svg>
                     </div>
-                    <h3
+                    <h2
                       style={{
                         fontSize: "24px",
                         fontWeight: 800,
@@ -397,7 +401,7 @@ export default function Contactos() {
                       }}
                     >
                       {t("form.success.title")}
-                    </h3>
+                    </h2>
                     <p
                       style={{
                         fontSize: "15px",
@@ -409,8 +413,10 @@ export default function Contactos() {
                     </p>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} noValidate>
-                    <h3
+                  <form onSubmit={handleSubmit} noValidate aria-busy={status === 'loading'}>
+                    <SpamTrap />
+                    {status === 'error' && <p role="alert">{t('leadForms:common.errors.submit')}</p>}
+                    <h2
                       style={{
                         fontSize: "22px",
                         fontWeight: 800,
@@ -420,7 +426,7 @@ export default function Contactos() {
                       }}
                     >
                       {t("form.title")}
-                    </h3>
+                    </h2>
                     <p
                       style={{
                         fontSize: "14px",
@@ -454,7 +460,7 @@ export default function Contactos() {
                         },
                       ].map(({ field, label, placeholder, type }) => (
                         <div key={field}>
-                          <label
+                          <label htmlFor={`contact-${field}`}
                             style={{
                               display: "block",
                               fontSize: "12px",
@@ -467,6 +473,7 @@ export default function Contactos() {
                             {label}
                           </label>
                           <input
+                            id={`contact-${field}`} name={field} required={field === 'nome' || field === 'email'} aria-invalid={!!errors[field as keyof typeof form]}
                             type={type}
                             placeholder={placeholder}
                             value={form[(field as keyof typeof form)]}
@@ -518,7 +525,7 @@ export default function Contactos() {
                         },
                       ].map(({ field, label, placeholder, type }) => (
                         <div key={field}>
-                          <label
+                          <label htmlFor={`contact-${field}`}
                             style={{
                               display: "block",
                               fontSize: "12px",
@@ -531,6 +538,7 @@ export default function Contactos() {
                             {label}
                           </label>
                           <input
+                            id={`contact-${field}`} name={field} required={field === 'nome' || field === 'email'} aria-invalid={!!errors[field as keyof typeof form]}
                             type={type}
                             placeholder={placeholder}
                             value={form[(field as keyof typeof form)]}
@@ -560,7 +568,7 @@ export default function Contactos() {
                     </div>
 
                     <div style={{ marginBottom: "24px" }}>
-                      <label
+                      <label htmlFor="contact-mensagem"
                         style={{
                           display: "block",
                           fontSize: "12px",
@@ -572,7 +580,7 @@ export default function Contactos() {
                       >
                         {t("form.message")}
                       </label>
-                      <textarea
+                      <textarea id="contact-mensagem" name="mensagem" required maxLength={5000} aria-invalid={!!errors.mensagem}
                         placeholder={t("form.messagePlaceholder")}
                         rows={5}
                         value={form.mensagem}
@@ -676,7 +684,7 @@ export default function Contactos() {
           section:nth-child(2) > div > div { grid-template-columns: 1fr !important; }
         }
         @media (max-width: 600px) {
-          form > div:first-child, form > div:nth-child(2) { grid-template-columns: 1fr !important; }
+          form > div[style*="grid"] { grid-template-columns: 1fr !important; }
         }
       `}</style>
     </div>

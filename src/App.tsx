@@ -27,7 +27,7 @@ import SistemaPontoPage from "./pages/solucoes/SistemaPontoPage"
 import CibersegurancaInfraestruturaPage from "./pages/solucoes/CibersegurancaInfraestruturaPage"
 import LegalPage from "./pages/LegalPage"
 
-import Redirect from "./components/Redirect"
+import PageMetadata from './components/PageMetadata'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -115,6 +115,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <PageMetadata />
       <Routes>
         <Route
           path="/"

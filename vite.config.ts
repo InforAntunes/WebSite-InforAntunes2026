@@ -3,6 +3,9 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import path from 'node:path'
 
+import {siteSeo} from './scripts/site-seo'
+import leads from './api/leads'
+import {loadEnv} from 'vite'
 import siteConfiguration from './.figma/make/site.json'
 
 // Vite config — https://vitejs.dev/config/
@@ -16,7 +19,10 @@ export default defineConfig(({ mode }) => {
       sourcemap: emitSourcemaps ? 'inline' : false,
       minify: !emitSourcemaps,
     },
+    define: {'import.meta.env.VITE_INDEX_PUBLIC':JSON.stringify(process.env.VERCEL_ENV==='production'?'yes':'no')},
     plugins: [
+      siteSeo(),
+      {name:'local-leads',configureServer(server){const env=loadEnv(mode,process.cwd(),'');for(const key of ['RESEND_API_KEY','CONTACT_TO_EMAIL','CONTACT_FROM_EMAIL','TURNSTILE_SECRET_KEY'])if(env[key])process.env[key]??=env[key];server.middlewares.use('/api/leads',leads)}},
       react(),
       tailwindcss(),
       figmaSiteConfiguration(siteConfiguration),
@@ -30,6 +36,7 @@ export default defineConfig(({ mode }) => {
       },
     },
     server: {
+      allowedHosts: ['implementar-formularios-e-seo-d16b3a23e22d8153.v0.build', 'sb-2y8va05yh2g2.vercel.run'],
       host: process.env.FIGMA_DEV_SERVER_HOST || '0.0.0.0',
       port: parseInt(process.env.PORT || '8443'),
       strictPort: true,
