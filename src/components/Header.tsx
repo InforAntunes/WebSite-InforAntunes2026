@@ -47,7 +47,7 @@ export default function Header() {
 
   const currentLang =
     LANGUAGES.find((l) => l.code === i18n.language) || LANGUAGES[0]
-  const isScrolledOrMobile = scrolled
+  const isScrolledOrMobile = scrolled || mobileOpen
 
   const textColor = isScrolledOrMobile ? "#20252B" : "#FFFFFF"
   const titleColor = isScrolledOrMobile ? "#005FA8" : "#FFFFFF"
@@ -132,15 +132,20 @@ export default function Header() {
       <header
         className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
         style={{
-          background: scrolled ? "rgba(255,255,255,0.96)" : "transparent",
-          backdropFilter: scrolled ? "blur(12px)" : "none",
-          borderBottom: scrolled
+          background: isScrolledOrMobile
+            ? "rgba(255,255,255,0.96)"
+            : "transparent",
+          backdropFilter: isScrolledOrMobile ? "blur(12px)" : "none",
+          borderBottom: isScrolledOrMobile
             ? "1px solid #E2E8F0"
             : "1px solid transparent",
-          boxShadow: scrolled ? "0 1px 24px rgba(0,0,0,0.06)" : "none",
+          boxShadow: isScrolledOrMobile
+            ? "0 1px 24px rgba(0,0,0,0.06)"
+            : "none",
         }}
       >
         <div
+          className="ia-header-container"
           style={{ maxWidth: "1320px", margin: "0 auto", padding: "0 32px" }}
         >
           <div
@@ -518,6 +523,7 @@ export default function Header() {
 
               <Link
                 to="https://github.com/InforAntunes/SupremoInforantunes/releases/download/v1.0.0/Inforantunes.exe"
+                className="ia-support-cta"
                 style={{
                   padding: "9px 20px",
                   background: "#C00000",
@@ -785,6 +791,14 @@ export default function Header() {
         @media (max-width: 900px) {
           .ia-hidden-mobile { display: none !important; }
           .ia-show-mobile { display: flex !important; }
+        }
+        @media (max-width: 380px) {
+          .ia-header-container { padding: 0 16px !important; }
+          .ia-support-cta {
+            padding: 7px 10px !important;
+            font-size: 12px !important;
+            white-space: nowrap;
+          }
         }
         @media (min-width: 901px) {
           .ia-show-mobile { display: none !important; }

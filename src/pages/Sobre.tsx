@@ -190,6 +190,7 @@ export default function Sobre() {
             <FadeIn>
               <div style={{ position: "relative" }}>
                 <div
+                  className="about-timeline-center-line"
                   style={{
                     position: "absolute",
                     top: "-20px",
@@ -330,6 +331,7 @@ export default function Sobre() {
             </div>
           </FadeIn>
           <div
+            className="about-timeline-item"
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(4, 1fr)",
@@ -456,7 +458,10 @@ export default function Sobre() {
                 >
                   {i % 2 === 0 ? (
                     <>
-                      <div style={{ textAlign: "right", paddingRight: "40px" }}>
+                      <div
+                        className="about-timeline-content"
+                        style={{ textAlign: "right", paddingRight: "40px" }}
+                      >
                         <div
                           style={{
                             fontSize: "11px",
@@ -490,7 +495,7 @@ export default function Sobre() {
                           {item.desc}
                         </p>
                       </div>
-                      <div style={{ paddingLeft: "40px" }}>
+                      <div className="about-timeline-marker" style={{ paddingLeft: "40px" }}>
                         <div
                           style={{
                             width: "12px",
@@ -527,7 +532,7 @@ export default function Sobre() {
                           }}
                         />
                       </div>
-                      <div style={{ paddingLeft: "40px" }}>
+                      <div className="about-timeline-content" style={{ paddingLeft: "40px" }}>
                         <div
                           style={{
                             fontSize: "11px",

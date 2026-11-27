@@ -350,6 +350,7 @@ export default function Home() {
 
             {/* Right: visual */}
             <div
+              className="home-hero-visual"
               style={{
                 opacity: heroVisible ? 1 : 0,
                 transform: heroVisible ? "scale(1)" : "scale(0.96)",
@@ -358,6 +359,7 @@ export default function Home() {
               }}
             >
               <div
+                className="home-hero-image"
                 style={{
                   position: "relative",
                   borderRadius: "20px",
@@ -529,7 +531,6 @@ export default function Home() {
         <style>{`
           @media (max-width: 900px) {
             section:first-child > div > div { grid-template-columns: 1fr !important; }
-            section:first-child > div > div > div:last-child { display: none !important; }
           }
         `}</style>
       </section>
@@ -686,6 +687,7 @@ export default function Home() {
                   ))}
                 </div>
                 <div
+                  className="home-about-image"
                   style={{
                     borderRadius: "20px",
                     overflow: "hidden",
@@ -911,6 +913,7 @@ export default function Home() {
               <FadeIn key={i} delay={i * 60}>
                 <Link to={servicePaths[i]} style={{ textDecoration: "none" }}>
                   <div
+                    className="home-service-row"
                     style={{
                       display: "grid",
                       gridTemplateColumns: "80px 1fr auto",
@@ -1333,6 +1336,7 @@ export default function Home() {
             <FadeIn delay={120}>
               <div style={{ position: "relative" }}>
                 <div
+                  className="home-payment-image"
                   style={{
                     borderRadius: "20px",
                     overflow: "hidden",
@@ -1443,8 +1447,12 @@ export default function Home() {
             }}
           >
             <FadeIn>
-              <div style={{ position: "relative" }}>
+              <div
+                className="home-robotics-visual"
+                style={{ position: "relative" }}
+              >
                 <div
+                  className="home-robotics-image"
                   style={{
                     borderRadius: "24px",
                     overflow: "hidden",
@@ -1469,6 +1477,7 @@ export default function Home() {
                 ].map((l, i) => (
                   <div
                     key={i}
+                    className="home-robotics-label"
                     style={{
                       position: "absolute",
                       ...(l.top ? { top: l.top } : {}),
