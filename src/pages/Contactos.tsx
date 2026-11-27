@@ -1,5 +1,12 @@
 import { useState, useEffect, useRef } from "react"
 import { deliver, SpamTrap } from '../components/LeadDelivery'
+import TurnstileCaptcha from "../components/TurnstileCaptcha"
+import {
+  EMAIL_PATTERN,
+  NAME_PATTERN,
+  PHONE_PATTERN,
+  isValidPhone,
+} from "../components/leadValidation"
 import { Link } from "react-router-dom"
 import { useTranslation } from "react-i18next"
 
@@ -55,14 +62,20 @@ export default function Contactos() {
   })
   const [errors, setErrors] = useState<Partial<typeof form>>({})
   const [status, setStatus] = useState<FormState>("idle")
+  const [captchaToken, setCaptchaToken] = useState("")
+  const [captchaResetKey, setCaptchaResetKey] = useState(0)
   const started = useRef(Date.now())
   const [focused, setFocused] = useState<string | null>(null)
 
   const validate = () => {
     const e: Partial<typeof form> = {}
     if (!form.nome.trim()) e.nome = t("form.errors.nameRequired")
-    if (!form.email.trim() || !/\S+@\S+\.\S+/.test(form.email))
+    else if (!NAME_PATTERN.test(form.nome.trim()))
+      e.nome = t("form.errors.nameInvalid")
+    if (!form.email.trim() || !EMAIL_PATTERN.test(form.email.trim()))
       e.email = t("form.errors.emailInvalid")
+    if (form.telefone.trim() && !isValidPhone(form.telefone.trim()))
+      e.telefone = t("form.errors.phoneInvalid")
     if (!form.mensagem.trim()) e.mensagem = t("form.errors.messageRequired")
     return e
   }
@@ -74,12 +87,19 @@ export default function Contactos() {
       setErrors(e)
       return
     }
+    if (!captchaToken) {
+      setStatus("error")
+      return
+    }
     setErrors({})
     setStatus("loading")
     try {
       await deliver('contact', form, started.current, ev.currentTarget as HTMLFormElement)
       setStatus('success')
-    } catch { setStatus('error') }
+    } catch {
+      setCaptchaResetKey((current) => current + 1)
+      setStatus('error')
+    }
   }
 
   const inputStyle = (field: string) => ({
@@ -415,6 +435,10 @@ export default function Contactos() {
                 ) : (
                   <form onSubmit={handleSubmit} noValidate aria-busy={status === 'loading'}>
                     <SpamTrap />
+                    <TurnstileCaptcha
+                      onTokenChange={setCaptchaToken}
+                      resetKey={captchaResetKey}
+                    />
                     {status === 'error' && <p role="alert">{t('leadForms:common.errors.submit')}</p>}
                     <h2
                       style={{
@@ -474,6 +498,8 @@ export default function Contactos() {
                           </label>
                           <input
                             id={`contact-${field}`} name={field} required={field === 'nome' || field === 'email'} aria-invalid={!!errors[field as keyof typeof form]}
+                            pattern={field === "nome" ? NAME_PATTERN.source : undefined}
+                            maxLength={field === "nome" ? 100 : 250}
                             type={type}
                             placeholder={placeholder}
                             value={form[(field as keyof typeof form)]}
@@ -539,6 +565,8 @@ export default function Contactos() {
                           </label>
                           <input
                             id={`contact-${field}`} name={field} required={field === 'nome' || field === 'email'} aria-invalid={!!errors[field as keyof typeof form]}
+                            pattern={field === "email" ? EMAIL_PATTERN.source : PHONE_PATTERN.source}
+                            maxLength={field === "email" ? 254 : 25}
                             type={type}
                             placeholder={placeholder}
                             value={form[(field as keyof typeof form)]}
@@ -610,7 +638,7 @@ export default function Contactos() {
 
                     <button
                       type="submit"
-                      disabled={status === "loading"}
+                      disabled={status === "loading" || !captchaToken}
                       style={{
                         width: "100%",
                         padding: "15px",

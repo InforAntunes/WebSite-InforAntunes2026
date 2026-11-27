@@ -53,6 +53,10 @@
       "required": "Ce champ est obligatoire.",
       "email": "Saisissez un e-mail professionnel valide.",
       "phone": "Saisissez un numéro de téléphone valide.",
+      "name": "Saisissez un nom valide, sans chiffres ni symboles.",
+      "nif": "Le numéro fiscal doit contenir 9 chiffres.",
+      "captchaConfiguration": "La vérification de sécurité n'est pas configurée. Contactez le support du site.",
+      "captchaLoad": "Impossible de charger la vérification de sécurité. Vérifiez votre connexion et réessayez.",
       "consent": "Vous devez accepter le traitement des données.",
       "submit": "Impossible de finaliser la demande. Veuillez réessayer."
     },

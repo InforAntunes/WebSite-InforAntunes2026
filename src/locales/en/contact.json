@@ -28,7 +28,9 @@
     "sending": "Sending...",
     "errors": {
       "nameRequired": "Name is required",
+      "nameInvalid": "Enter a valid name without numbers or symbols",
       "emailInvalid": "Invalid email address",
+      "phoneInvalid": "Enter a valid phone number",
       "messageRequired": "Message is required"
     },
     "success": {

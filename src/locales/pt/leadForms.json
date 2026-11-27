@@ -53,6 +53,10 @@
       "required": "Este campo é obrigatório.",
       "email": "Introduza um email profissional válido.",
       "phone": "Introduza um número de telefone válido.",
+      "name": "Introduza um nome válido, sem números ou símbolos.",
+      "nif": "O NIF deve conter 9 algarismos.",
+      "captchaConfiguration": "A verificação de segurança não está configurada. Contacte o suporte do site.",
+      "captchaLoad": "Não foi possível carregar a verificação de segurança. Verifique a ligação e tente novamente.",
       "consent": "É necessário aceitar o tratamento de dados.",
       "submit": "Não foi possível concluir o pedido. Tente novamente."
     },

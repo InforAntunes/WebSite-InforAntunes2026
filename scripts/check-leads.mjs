@@ -16,10 +16,21 @@ try {
     RESEND_API_KEY: "test-only",
     CONTACT_FROM_EMAIL: "site@example.invalid",
     CONTACT_TO_EMAIL: "team@example.invalid",
-    TURNSTILE_SECRET_KEY: "",
+    TURNSTILE_SECRET_KEY: "test-only",
   })
   const messages = []
+  let captchaAccepted = true
   globalThis.fetch = async (url, options) => {
+    if (url === "https://challenges.cloudflare.com/turnstile/v0/siteverify") {
+      assert.equal(
+        new URLSearchParams(options.body).get("secret"),
+        process.env.TURNSTILE_SECRET_KEY,
+      )
+      assert.ok(new URLSearchParams(options.body).get("response"))
+      return new Response(JSON.stringify({ success: captchaAccepted }), {
+        status: 200,
+      })
+    }
     assert.equal(url, "https://api.resend.com/emails")
     messages.push(JSON.parse(options.body))
     return new Response(null, { status: 200 })
@@ -36,6 +47,7 @@ try {
           path: "/contactos",
           started: Date.now() - 5000,
           website: "",
+          token: "verified-test-token",
           ...extra,
         },
       },
@@ -76,6 +88,8 @@ try {
         f.name,
         f.type === "multiselect"
           ? ["Teste"]
+        : f.name === "nif"
+          ? "123456789"
           : f.name === "phone"
             ? "912345678"
             : f.name === "email"
@@ -91,11 +105,21 @@ try {
   assert.equal(await submit("contact", contact, { website: "bot" }), 200)
   assert.equal(await submit("contact", contact, { started: Date.now() }), 422)
   assert.equal(await submit("contact", { ...contact, email: "inválido" }), 422)
+  assert.equal(await submit("contact", { ...contact, nome: "Bot123" }), 422)
+  assert.equal(await submit("contact", contact, { token: "" }), 422)
+  captchaAccepted = false
+  assert.equal(await submit("contact", contact), 422)
+  captchaAccepted = true
   assert.equal(messages.length, before)
-  globalThis.fetch = async () => new Response(null, { status: 502 })
+  globalThis.fetch = async (url) => {
+    if (url === "https://challenges.cloudflare.com/turnstile/v0/siteverify") {
+      return new Response(JSON.stringify({ success: true }), { status: 200 })
+    }
+    return new Response(null, { status: 502 })
+  }
   assert.equal(await submit("contact", contact), 502)
   console.log(
-    "Validados 11 pedidos, notificações, consentimento, anti-spam e falha do fornecedor, sem envio de e-mail.",
+    "Validados 11 tipos de pedido, CAPTCHA, consentimento, anti-spam e falha do fornecedor, sem envio de e-mail.",
   )
 } finally {
   await vite.close()

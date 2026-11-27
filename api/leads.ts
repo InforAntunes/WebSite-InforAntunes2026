@@ -4,6 +4,12 @@ import {
   leadFormConfigs,
   type LeadFormType,
 } from "../src/components/leadFormConfigs.js"
+import {
+  EMAIL_PATTERN,
+  NAME_PATTERN,
+  NIF_PATTERN,
+  isValidPhone,
+} from "../src/components/leadValidation.js"
 
 const sources = {
   contact: ["contact", "Contacto geral", "Website"],
@@ -55,10 +61,10 @@ const envelope = z.object({
   token: z.string().max(2048).optional(),
 })
 const contact = z.strictObject({
-  nome: text.min(1),
+  nome: text.min(1).max(100).regex(NAME_PATTERN),
   empresa: text,
-  email: z.email().max(254),
-  telefone: text,
+  email: z.email().max(254).regex(EMAIL_PATTERN),
+  telefone: text.refine((value) => !value || isValidPhone(value)),
   mensagem: z.string().trim().min(1).max(5000),
 })
 function parseValues(type: string, values: unknown) {
@@ -66,16 +72,19 @@ function parseValues(type: string, values: unknown) {
   const shape: Record<string, z.ZodType> = { consent: z.literal(true) }
   for (const field of leadFormConfigs[(type as LeadFormType)].fields) {
     const base = field.type === "textarea" ? z.string().trim().max(5000) : text
-    shape[field.name] =
-      field.type === "multiselect"
-        ? z.array(text.min(1)).min(1).max(30)
-        : field.type === "email"
-          ? z.email().max(254)
-          : field.type === "tel"
-            ? text.refine((v) => v.replace(/\D/g, "").length >= 9)
-            : field.required
-              ? base.min(1)
-              : base.optional()
+    if (field.type === "multiselect") {
+      shape[field.name] = z.array(text.min(1)).min(1).max(30)
+    } else if (field.type === "email") {
+      shape[field.name] = z.email().max(254).regex(EMAIL_PATTERN)
+    } else if (field.type === "tel") {
+      shape[field.name] = text.refine(isValidPhone)
+    } else if (field.name === "contact") {
+      shape[field.name] = text.max(100).regex(NAME_PATTERN)
+    } else if (field.name === "nif") {
+      shape[field.name] = text.refine((value) => !value || NIF_PATTERN.test(value))
+    } else {
+      shape[field.name] = field.required ? base.min(1) : base.optional()
+    }
   }
   return z.strictObject(shape).safeParse(values)
 }
@@ -136,20 +145,18 @@ export default async function leads(
     CONTACT_TO_EMAIL: to,
     TURNSTILE_SECRET_KEY: secret,
   } = process.env
-  if (!key || !from || !to) return reply(503)
+  if (!key || !from || !to || !secret) return reply(503)
   try {
-    if (secret) {
-      if (!token) return reply(422)
-      const check = await fetch(
-        "https://challenges.cloudflare.com/turnstile/v0/siteverify",
-        {
-          method: "POST",
-          body: new URLSearchParams({ secret, response: token }),
-          signal: AbortSignal.timeout(5000),
-        },
-      )
-      if (!check.ok || !(await check.json()).success) return reply(422)
-    }
+    if (!token) return reply(422)
+    const check = await fetch(
+      "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+      {
+        method: "POST",
+        body: new URLSearchParams({ secret, response: token }),
+        signal: AbortSignal.timeout(5000),
+      },
+    )
+    if (!check.ok || !(await check.json()).success) return reply(422)
     const data: Record<string, unknown> = validated.data
     const email = z.email().safeParse(data.email)
     const send = async (message: Record<string, unknown>) => {

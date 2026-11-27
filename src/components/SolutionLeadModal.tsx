@@ -8,9 +8,17 @@ import {
   useState,
 } from "react"
 import { deliver, SpamTrap } from './LeadDelivery'
+import TurnstileCaptcha from "./TurnstileCaptcha"
 import { createPortal } from "react-dom"
 import { Link } from "react-router-dom"
 import { useTranslation } from "react-i18next"
+import {
+  EMAIL_PATTERN,
+  NAME_PATTERN,
+  NIF_PATTERN,
+  PHONE_PATTERN,
+  isValidPhone,
+} from "./leadValidation"
 import {
   leadFormConfigs,
   type LeadFieldConfig,
@@ -82,6 +90,8 @@ export default function SolutionLeadModal({
   const [form, setForm] = useState<FormValues>(createEmptyForm)
   const [errors, setErrors] = useState<FormErrors>({})
   const [status, setStatus] = useState<LeadFormStatus>("idle")
+  const [captchaToken, setCaptchaToken] = useState("")
+  const [captchaResetKey, setCaptchaResetKey] = useState(0)
   const dialogRef = useRef<HTMLDivElement>(null)
   const closeButtonRef = useRef<HTMLButtonElement>(null)
   const triggerRef = useRef<HTMLButtonElement>(null)
@@ -105,6 +115,8 @@ export default function SolutionLeadModal({
     setForm(createEmptyForm())
     setErrors({})
     setStatus("idle")
+    setCaptchaToken("")
+    setCaptchaResetKey((current) => current + 1)
     setMounted(true)
     window.requestAnimationFrame(() => setVisible(true))
   }
@@ -184,14 +196,24 @@ export default function SolutionLeadModal({
       }
     })
 
-    const email = String(form.email)
-    if (email && !/^\S+@\S+\.\S+$/.test(email)) {
+    const email = String(form.email).trim()
+    if (email && !EMAIL_PATTERN.test(email)) {
       nextErrors.email = t("common.errors.email")
     }
 
-    const phoneDigits = String(form.phone).replace(/\D/g, "")
-    if (form.phone && phoneDigits.length < 9) {
+    const phone = String(form.phone).trim()
+    if (phone && !isValidPhone(phone)) {
       nextErrors.phone = t("common.errors.phone")
+    }
+
+    const contact = String(form.contact).trim()
+    if (contact && !NAME_PATTERN.test(contact)) {
+      nextErrors.contact = t("common.errors.name")
+    }
+
+    const nif = String(form.nif).trim()
+    if (nif && !NIF_PATTERN.test(nif)) {
+      nextErrors.nif = t("common.errors.nif")
     }
 
     if (!form.consent) {
@@ -213,6 +235,7 @@ export default function SolutionLeadModal({
       })
       return
     }
+    if (!captchaToken) return
 
     setErrors({})
     setStatus("submitting")
@@ -237,6 +260,7 @@ export default function SolutionLeadModal({
       }
     } catch {
       if (submitAttemptRef.current === submitAttempt) {
+        setCaptchaResetKey((current) => current + 1)
         setStatus("error")
         setErrors({ form: t("common.errors.submit") })
       }
@@ -319,14 +343,38 @@ export default function SolutionLeadModal({
           placeholder={field.placeholderKey ? t(field.placeholderKey) : undefined}
           onChange={(event) => setField(field.name, event.target.value)}
           rows={5}
+          maxLength={5000}
         />
       )
     }
+
+    const pattern =
+      field.name === "email"
+        ? EMAIL_PATTERN.source
+        : field.name === "phone"
+          ? PHONE_PATTERN.source
+          : field.name === "contact"
+            ? NAME_PATTERN.source
+            : field.name === "nif"
+              ? NIF_PATTERN.source
+              : undefined
+    const maxLength =
+      field.name === "email"
+        ? 254
+        : field.name === "phone"
+          ? 25
+          : field.name === "nif"
+            ? 9
+            : field.name === "contact"
+              ? 100
+              : 250
 
     return (
       <input
         {...commonProps}
         type={field.type}
+        maxLength={maxLength}
+        pattern={pattern}
         value={String(form[field.name])}
         placeholder={field.placeholderKey ? t(field.placeholderKey) : undefined}
         autoComplete={field.autoComplete}
@@ -426,8 +474,12 @@ export default function SolutionLeadModal({
                     <p>{t(config.descriptionKey)}</p>
                   </header>
 
-                  <form onSubmit={handleSubmit} noValidate aria-busy={status === 'submitting'}>
+                  <form onSubmit={handleSubmit} noValidate aria-busy={status === "submitting"}>
                     <SpamTrap />
+                    <TurnstileCaptcha
+                      onTokenChange={setCaptchaToken}
+                      resetKey={captchaResetKey}
+                    />
                     <div className="solution-lead-grid">
                       {config.fields.map((field) => {
                         const id = fieldId(field.name)
@@ -516,7 +568,7 @@ export default function SolutionLeadModal({
                       <button
                         className="solution-lead-submit"
                         type="submit"
-                        disabled={status === "submitting"}
+                        disabled={status === "submitting" || !captchaToken}
                       >
                         {status === "submitting" && (
                           <span className="solution-lead-spinner" />
